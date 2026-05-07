@@ -31,4 +31,4 @@ The perceptron notebook uses an added bias feature, therefore its input matrix i
 
 ## Final interpretation
 
-The official raw-label held-out test result for the final multi-class neural network is **45.84% accuracy**. The aligned-label diagnostic reaches **88.62% accuracy**, which supports the documented hypothesis that the provided test labels are compressed from class 10 onward. The raw-label result is kept as the official result because it uses `sign_mnist_test.csv` exactly as provided.
+The raw-label held-out test result for the final multi-class neural network is **45.84% accuracy**. The aligned-label diagnostic reaches **88.62% accuracy**, which supports the documented hypothesis that the provided test labels are compressed from class 10 onward. The raw-label result is kept as the primary reproducible result because it uses `sign_mnist_test.csv` exactly as provided.
