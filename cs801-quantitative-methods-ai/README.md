@@ -136,6 +136,6 @@ Improved CS801 Quantitative Methods in AI portfolio: critique and enhancement of
 data-science, machine-learning, quantitative-methods, kaggle, clustering, fraud-detection, nlp, tfidf, statistics, portfolio
 ```
 
-## Academic integrity note
+## Data and reproducibility note
 
-This repository is a portfolio-ready improvement of an assessed assignment. Before publishing publicly, check your university rules about sharing coursework, assignment briefs, marked feedback, or datasets. The repository intentionally excludes raw data, graded screenshots and original assignment PDFs.
+This repository contains reproducible analysis code, documentation and setup files. Raw Kaggle datasets and private course materials are intentionally excluded; the notebooks describe the expected local data files in `data/README.md`.
