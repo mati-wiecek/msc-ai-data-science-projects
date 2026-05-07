@@ -1,0 +1,296 @@
+title,character,series,number,rarity,type,description,hp,attack,japan release date,global release date,hp_max,attack_max,is_high_tier,main_type,alignment,release_gap_days,hp_max_raw,attack_max_raw,hp_for_model,attack_for_model,is_high
+Pride Regained,Super Saiyan Vegeta,Series 2,44,gold,Extreme TEQ,Can be recruited from Summons.,8400,7000,2021-05-03,2021-07-26,8400.0,7000.0,1,TEQ,extreme,84.0,8400.0,7000.0,8400.0,7000.0,1
+Time-traversing Evil,Cell (1st Form),Series 3,104,bronze,TEQ,Can be recruited from Summons.,3700,2450,2021-07-26,2021-09-06,3700.0,2450.0,0,TEQ,,42.0,3700.0,2450.0,3700.0,2450.0,0
+Red Ribbon Army's Grudge,Dr. Gero,Series 2,55,silver,Extreme INT,Can be recruited from Summons.,5700,3800,2021-05-03,2021-07-26,5700.0,3800.0,0,INT,extreme,84.0,5700.0,3800.0,5700.0,3800.0,0
+Infinite Fighting Spirit,Android #17,Series 2,57,silver,Extreme TEQ,Can be recruited from Summons.,6100,4050,2021-05-03,2021-07-26,6100.0,4050.0,0,TEQ,extreme,84.0,6100.0,4050.0,6100.0,4050.0,0
+Alluring Assassin,Android #18,Series 3,93,silver,Extreme STR,Can be recruited from Summons.,6100,4050,2021-07-26,2021-09-06,6100.0,4050.0,0,STR,extreme,42.0,6100.0,4050.0,6100.0,4050.0,0
+Power Unleashed,Android #16,Series 2,56,silver,Extreme PHY,Can be recruited from Summons.,6200,4150,2021-05-03,2021-07-26,6200.0,4150.0,0,PHY,extreme,84.0,6200.0,4150.0,6200.0,4150.0,0
+From Hell and Back,Trunks (Teen),Series 2,61,bronze,AGL,Can be recruited from Summons.,3800,2550,2021-05-03,2021-07-26,3800.0,2550.0,0,AGL,,84.0,3800.0,2550.0,3800.0,2550.0,0
+Confident Grin,Zarbon,Series 1,33,bronze,PHY,Can be recruited from Summons.,3500,2350,,2021-05-25,3500.0,2350.0,0,PHY,,,3500.0,2350.0,3500.0,2350.0,0
+Captain's Merit,Captain Ginyu,Series 1,28,bronze,STR,Can be recruited from Summons.,4200,2800,,2021-05-25,4200.0,2800.0,0,STR,,,4200.0,2800.0,4200.0,2800.0,0
+Mad Scientist's Revenge,Dr. Gero,Series 2,67,bronze,TEQ,Can be recruited from Summons.,3900,2600,2021-05-03,2021-07-26,3900.0,2600.0,0,TEQ,,84.0,3900.0,2600.0,3900.0,2600.0,0
+Escalating Threat,Android #17,Series 2,71,bronze,PHY,Can be recruited from Summons.,4100,2750,2021-05-03,2021-07-26,4100.0,2750.0,0,PHY,,84.0,4100.0,2750.0,4100.0,2750.0,0
+Fancy Footwork,Android #18,Series 2,70,bronze,AGL,Can be recruited from Summons.,4100,2750,2021-05-03,2021-07-26,4100.0,2750.0,0,AGL,,84.0,4100.0,2750.0,4100.0,2750.0,0
+Nature-loving Warrior,Android #16,Series 2,72,bronze,TEQ,Can be recruited from Summons.,4200,2800,2021-05-03,2021-07-26,4200.0,2800.0,0,TEQ,,84.0,4200.0,2800.0,4200.0,2800.0,0
+Obstacle Eliminator,Dodoria,Series 1,34,bronze,STR,Can be recruited from Summons.,3400,2250,,2021-05-25,3400.0,2250.0,0,STR,,,3400.0,2250.0,3400.0,2250.0,0
+Dazzling Destruction,Recoome,Series 1,29,bronze,PHY,Can be recruited from Summons.,4000,2650,,2021-05-25,4000.0,2650.0,0,PHY,,,4000.0,2650.0,4000.0,2650.0,0
+The Timestopper,Guldo,Series 1,32,bronze,INT,Can be recruited from Summons.,3600,2400,,2021-05-25,3600.0,2400.0,0,INT,,,3600.0,2400.0,3600.0,2400.0,0
+Unfathomable Speed,Burter,Series 1,30,bronze,AGL,Can be recruited from Summons.,3900,2600,,2021-05-25,3900.0,2600.0,0,AGL,,,3900.0,2600.0,3900.0,2600.0,0
+Elite Squadron's Pride,Jeice,Series 1,31,bronze,STR,Can be recruited from Summons.,3800,2550,,2021-05-25,3800.0,2550.0,0,STR,,,3800.0,2550.0,3800.0,2550.0,0
+Champion's Honor,Hercule,Series 4,140,bronze,INT,Can be recruited from Summons.,2000,3000,,2021-12-15,2000.0,3000.0,0,INT,,,2000.0,3000.0,2000.0,3000.0,0
+Tiny Terror,Cell Jr.,Series 3,110,bronze,PHY,Can be recruited from Summons.,3900,2600,2021-07-26,2021-09-06,3900.0,2600.0,0,PHY,,42.0,3900.0,2600.0,3900.0,2600.0,0
+Savagery Unleashed,Spopovich,Series 4,144,bronze,TEQ,Can be recruited from Friend Summons.,2150,3200,,2021-12-15,2150.0,3200.0,0,TEQ,,,2150.0,3200.0,2150.0,3200.0,0
+Malicious Scheme,Yamu,Series 4,145,bronze,TEQ,Can be recruited from Friend Summons.,2150,3200,,2021-12-15,2150.0,3200.0,0,TEQ,,,2150.0,3200.0,2150.0,3200.0,0
+Steadfast Soldier,Appule,Series 1,36,bronze,STR,Can be recruited from Quests or Friend Summons.,3000,2000,,2021-05-25,3000.0,2000.0,0,STR,,,3000.0,2000.0,3000.0,2000.0,0
+Lethal Underling,Frieza Soldier,Series 1,37,bronze,TEQ,Can be recruited from Quests or Friend Summons.,3000,2000,,2021-05-25,3000.0,2000.0,0,TEQ,,,3000.0,2000.0,3000.0,2000.0,0
+Determined Defender,Goku,Series 1,10,silver,Super AGL,Can be recruited from Summons.,5700,3800,,2021-05-25,5700.0,3800.0,0,AGL,super,,5700.0,3800.0,5700.0,3800.0,0
+Killer Instinct,Android #19,Series 2,68,bronze,PHY,Can be recruited from Summons.,3700,2450,2021-05-03,2021-07-26,3700.0,2450.0,0,PHY,,84.0,3700.0,2450.0,3700.0,2450.0,0
+Target Confirmed,Android #19,Series 2,69,bronze,STR,Can be recruited from Summons.,3800,2550,2021-05-03,2021-07-26,3800.0,2550.0,0,STR,,84.0,3800.0,2550.0,3800.0,2550.0,0
+Free at Last,Android #17,Series 3,107,bronze,AGL,Can be recruited from Summons.,3600,2400,2021-07-26,2021-09-06,3600.0,2400.0,0,AGL,,42.0,3600.0,2400.0,3600.0,2400.0,0
+Craving of Battle,Cui,Series 1,35,bronze,INT,Can be recruited from Summons.,3200,2150,,2021-05-25,3200.0,2150.0,0,INT,,,3200.0,2150.0,3200.0,2150.0,0
+Paragon of Justice,Videl,Series 4,138,bronze,AGL,Can be recruited from Summons.,2100,3150,,2021-12-15,2100.0,3150.0,0,AGL,,,2100.0,3150.0,2100.0,3150.0,0
+Warrior of Beauty's Trump,Super Zarbon,Series 1,21,silver,Extreme AGL,Can be recruited from Summons.,5800,3850,,2021-05-25,5800.0,3850.0,0,AGL,extreme,,5800.0,3850.0,5800.0,3850.0,0
+Horror from Hell,Frieza (Final Form),Series 1,8,gold,Extreme TEQ,Currently unable to be recruited.,8700,7250,,2021-05-25,8700.0,7250.0,1,TEQ,extreme,,8700.0,7250.0,8700.0,7250.0,1
+Super Saiyan from the Future,Super Saiyan Trunks (Teen),Series 2,41,gold,Super INT,Can be recruited from Summons.,8300,6900,2021-05-03,2021-07-26,8300.0,6900.0,1,INT,super,84.0,8300.0,6900.0,8300.0,6900.0,1
+Intimidating Body Exchange,Ginyu (Goku),Series 1,16,silver,Extreme PHY,Can be recruited from Baba's Shop.,6100,4050,,2021-05-25,6100.0,4050.0,0,PHY,extreme,,6100.0,4050.0,6100.0,4050.0,0
+Furious Impact,Gohan (Kid),Series 1,14,silver,Super AGL,Can be recruited from Summons.,5700,3800,,2021-05-25,5700.0,3800.0,0,AGL,super,,5700.0,3800.0,5700.0,3800.0,0
+Wisdom and Experience,Krillin,Series 1,13,silver,Super AGL,Can be recruited from Summons.,5600,3750,,2021-05-25,5600.0,3750.0,0,AGL,super,,5600.0,3750.0,5600.0,3750.0,0
+Strength Evolved,Cell (2nd Form),Series 3,105,bronze,TEQ,Can be recruited from Summons.,3800,2550,2021-07-26,2021-09-06,3800.0,2550.0,0,TEQ,,42.0,3800.0,2550.0,3800.0,2550.0,0
+Perfect Power,Cell (Perfect Form),Series 3,106,bronze,PHY,Can be recruited from Summons.,4200,2800,2021-07-26,2021-09-06,4200.0,2800.0,0,PHY,,42.0,4200.0,2800.0,4200.0,2800.0,0
+Miraculous Return,Goku,Series 2,60,bronze,PHY,Currently unable to be recruited.,3700,2450,2021-05-03,2021-07-26,3700.0,2450.0,0,PHY,,84.0,3700.0,2450.0,3700.0,2450.0,0
+Great Power Unleashed,Android #16,Series 3,109,bronze,INT,"Can be recruited from the Strike Event ""Gentle Destroyer"".",3700,2450,2021-07-26,2021-09-06,3700.0,2450.0,0,INT,,42.0,3700.0,2450.0,3700.0,2450.0,0
+Wolf of the Gale,Yamcha,Series 1,24,bronze,TEQ,Can be recruited from Friend Summons.,3200,2150,,2021-05-25,3200.0,2150.0,0,TEQ,,,3200.0,2150.0,3200.0,2150.0,0
+The Way of Battle,Tien,Series 1,25,bronze,STR,Can be recruited from Friend Summons.,3600,2400,,2021-05-25,3600.0,2400.0,0,STR,,,3600.0,2400.0,3600.0,2400.0,0
+Anticipated Telekinesis,Chiaotzu,Series 1,26,bronze,INT,Can be recruited from Friend Summons.,3200,2150,,2021-05-25,3200.0,2150.0,0,INT,,,3200.0,2150.0,3200.0,2150.0,0
+A Warrior Obsessed,Majin Vegeta,Series 4,132,silver,Extreme TEQ,Can be recruited from Summons.,4250,6350,,2021-12-15,4250.0,6350.0,0,TEQ,extreme,,4250.0,6350.0,4250.0,6350.0,0
+A Monster Unleashed,Majin Buu (Good),Series 4,142,bronze,PHY,Can be recruited from Summons.,2900,4350,,2021-12-15,2900.0,4350.0,0,PHY,,,2900.0,4350.0,2900.0,4350.0,0
+Savage Battle Instinct,Buu (Super),Series 5,181,bronze,TEQ,Can be recruited from Summons.,4150,2750,,2022-02-08,4150.0,2750.0,0,TEQ,,,4150.0,2750.0,4150.0,2750.0,0
+Demonic Lord of Darkness,Dabura,Series 4,143,bronze,AGL,Can be recruited from Summons.,2700,4050,,2021-12-15,2700.0,4050.0,0,AGL,,,2700.0,4050.0,2700.0,4050.0,0
+Malevolent Magician,Babidi,Series 4,129,silver,Extreme INT,Can be recruited from Summons.,3750,5600,,2021-12-15,3750.0,5600.0,0,INT,extreme,,3750.0,5600.0,3750.0,5600.0,0
+Twin-Clawed Terror,Yakon,Series 4,146,bronze,STR,Can be recruited from Summons.,2500,3750,,2021-12-15,2500.0,3750.0,0,STR,,,2500.0,3750.0,2500.0,3750.0,0
+Confident Sentry,Pui Pui,Series 4,147,bronze,AGL,Can be recruited from Summons.,2300,3450,,2021-12-15,2300.0,3450.0,0,AGL,,,2300.0,3450.0,2300.0,3450.0,0
+Fear's Ultimate Form,Golden Frieza,Series 4,133,silver,Extreme INT,Can be recruited from Summons.,4300,6450,,2021-12-15,4300.0,6450.0,0,INT,extreme,,4300.0,6450.0,4300.0,6450.0,0
+Protector of the Peace,Krillin (Police Officer),Series 6,209,bronze,PHY,Currently unable to be recruited.,3300,2200,,,3300.0,2200.0,0,PHY,,,3300.0,2200.0,3300.0,2200.0,0
+Indomitable Sense of Justice,Super Saiyan Gohan (Teen),Series 4,141,bronze,PHY,Can be recruited from Summons.,2750,4150,,2021-12-15,2750.0,4150.0,0,PHY,,,2750.0,4150.0,2750.0,4150.0,0
+Double the Power,Gotenks,Series 5,172,bronze,AGL,Can be recruited from Summons.,4000,2650,,2022-02-08,4000.0,2650.0,0,AGL,,,4000.0,2650.0,4000.0,2650.0,0
+Unpredictable Paunch,Veku,Series 3,103,bronze,PHY,"Can be recruited from the Dokkan Event ""The Inimitable Fusion"".",3450,2300,2021-07-26,2021-09-06,3450.0,2300.0,0,PHY,,42.0,3450.0,2300.0,3450.0,2300.0,0
+Crimson Rush,Shisami,Series 4,148,bronze,STR,Can be recruited from Summons.,2600,3900,,2021-12-15,2600.0,3900.0,0,STR,,,2600.0,3900.0,2600.0,3900.0,0
+Strength of Trust,Tien,Series 6,210,bronze,INT,Can be recruited from Summons.,2350,2300,,,2350.0,2300.0,0,INT,,,2350.0,2300.0,2350.0,2300.0,0
+Seasoned Warrior,Piccolo,Series 6,211,bronze,STR,Can be recruited from Summons.,3500,2350,,,3500.0,2350.0,0,STR,,,3500.0,2350.0,3500.0,2350.0,0
+Carnage Awakens,Beerus,Series 6,217,bronze,TEQ,Can be recruited from Summons.,4350,2900,,,4350.0,2900.0,0,TEQ,,,4350.0,2900.0,4350.0,2900.0,0
+Grand Plan,Gohan (Youth),Series 5,178,bronze,PHY,"Can be recruited from the Strike Event ""Galactic Crisis! Super Guy In The Galaxy"".",3450,2300,,2022-02-08,3450.0,2300.0,0,PHY,,,3450.0,2300.0,3450.0,2300.0,0
+Transcended Power Level,Goku,Series 1,11,silver,Super PHY,Currently unable to be recruited.,6200,4150,,2021-05-25,6200.0,4150.0,0,PHY,super,,6200.0,4150.0,6200.0,4150.0,0
+Aggregate of Evil,Janemba,Series 3,111,bronze,AGL,Can be recruited from Summons.,4000,2650,2021-07-26,2021-09-06,4000.0,2650.0,0,AGL,,42.0,4000.0,2650.0,4000.0,2650.0,0
+Message from Another World,Goku (Angel),Series 3,101,bronze,AGL, Can be recruited during 20 Million Downloads Celebration. [Overflowing Resolve] Goku's Dokkan Awakened form.,3700,2450,2021-07-26,2021-09-06,3700.0,2450.0,0,AGL,,42.0,3700.0,2450.0,3700.0,2450.0,0
+Divine Wisdom,Piccolo,Series 2,49,silver,Super TEQ,"Can be recruited from the Strike Event ""The Divine Demonic Namekian Warrior"".",6000,4000,2021-05-03,2021-07-26,6000.0,4000.0,0,TEQ,super,84.0,6000.0,4000.0,6000.0,4000.0,0
+Future Hope,Trunks (Teen),Series 2,62,bronze,STR,"Can be recruited from the Strike Event ""The Time-Traveling Warrior"".",3900,2600,2021-05-03,2021-07-26,3900.0,2600.0,0,STR,,84.0,3900.0,2600.0,3900.0,2600.0,0
+Mystery Super Technique,Super Saiyan 3 Goku,Series 2,43,gold,Super AGL,[Stunning Metamorphosis] Super Saiyan 3 Goku's Dokkan Awakened form.,9350,7800,2021-05-03,2021-07-26,9350.0,7800.0,1,AGL,super,84.0,9350.0,7800.0,9350.0,7800.0,1
+Last Minute Technique,Super Saiyan Vegeta,Series 3,98,bronze,INT,Can be recruited from Summons.,4000,2650,2021-07-26,2021-09-06,4000.0,2650.0,0,INT,,42.0,4000.0,2650.0,4000.0,2650.0,0
+A Slash of Respect,Super Saiyan Trunks (Teen),Series 2,50,silver,Super AGL,Can be recruited from Summons.,5900,3950,2021-05-03,2021-07-26,5900.0,3950.0,0,AGL,super,84.0,5900.0,3950.0,5900.0,3950.0,0
+Swelling Power,Super Trunks,Series 3,86,silver,Super PHY,Can be recruited from Summons.,6150,4100,2021-07-26,2021-09-06,6150.0,4100.0,0,PHY,super,42.0,6150.0,4100.0,6150.0,4100.0,0
+Omen of Doom,Frieza (Full Power),Series 1,7,gold,Extreme PHY,Can be recruited from Dokkan Festivals.,8900,7400,,2021-05-25,8900.0,7400.0,1,PHY,extreme,,8900.0,7400.0,8900.0,7400.0,1
+State of God,Super Saiyan God Goku,Series 6,199,silver,Super PHY,[White Hot Face-Off] Super Saiyan Goku's Dokkan Awakened form.,6300,4200,,,6300.0,4200.0,0,PHY,super,,6300.0,4200.0,6300.0,4200.0,0
+Enigmatic Power,Whis,Series 6,203,silver,Super TEQ,Can be recruited from Summons.,6150,4100,,,6150.0,4100.0,0,TEQ,super,,6150.0,4100.0,6150.0,4100.0,0
+Letter of the Law,Kibito,Series 4,136,bronze,STR,"Can be recruited from the Strike Event ""Guardian of the Sanctuary"".",2450,3700,,2021-12-15,2450.0,3700.0,0,STR,,,2450.0,3700.0,2450.0,3700.0,0
+Heightened Intuition,Yamcha,Series 2,63,bronze,INT,Can be recruited from Summons.,3000,2000,2021-05-03,2021-07-26,3000.0,2000.0,0,INT,,84.0,3000.0,2000.0,3000.0,2000.0,0
+The Strongest Majin,Majin Buu (Gotenks),Series 5,180,bronze,STR,Can be recruited from Summons.,4350,2900,,2022-02-08,4350.0,2900.0,0,STR,,,4350.0,2900.0,4350.0,2900.0,0
+Hero of Love and Justice,Great Saiyaman,Series 2,64,bronze,AGL,[Rocky Road to Peace] Gohan (Teen)'s Dokkan Awakened form.,3500,2350,2021-05-03,2021-07-26,3500.0,2350.0,0,AGL,,84.0,3500.0,2350.0,3500.0,2350.0,0
+Goddess of Peace,Great Saiyaman 2,Series 2,65,bronze,STR,[Blazing Justice] Videl's Dokkan Awakened form.,3000,2000,2021-05-03,2021-07-26,3000.0,2000.0,0,STR,,84.0,3000.0,2000.0,3000.0,2000.0,0
+The Weight of Hope,Goku,Series 7,237,silver,Super PHY,Can be recruited from Summons.,',3850,,,5900.0,3850.0,0,PHY,super,,,3850.0,5900.0,3850.0,0
+Trusted Strength,Paikuhan,Series 3,90,silver,Super TEQ,Can be recruited from Summons.,6100,4050,2021-07-26,2021-09-06,6100.0,4050.0,0,TEQ,super,42.0,6100.0,4050.0,6100.0,4050.0,0
+Flawless Combat,Android #18,Series 2,46,gold,Extreme INT,Can be recruited from Summons.,8600,7150,2021-05-03,2021-07-26,8600.0,7150.0,1,INT,extreme,84.0,8600.0,7150.0,8600.0,7150.0,1
+True Might,Android #17,Series 2,45,gold,Extreme STR,Can be recruited from Summons.,8600,7150,2021-05-03,2021-07-26,8600.0,7150.0,1,STR,extreme,84.0,8600.0,7150.0,8600.0,7150.0,1
+Train Anywhere,Goku,Series 6,207,bronze,INT,Currently unable to be recruited.,3600,2400,,,3600.0,2400.0,0,INT,,,3600.0,2400.0,3600.0,2400.0,0
+Audacious Adventurer,Bulma,Series 1,27,bronze,INT,Can be recruited from Summons.,3000,2000,,2021-05-25,3000.0,2000.0,0,INT,,,3000.0,2000.0,3000.0,2000.0,0
+In Pursuit of a Formidable Foe,Beerus,Series 6,216,bronze,AGL,Currently unable to be recruited.,4400,2950,,,4400.0,2950.0,0,AGL,,,4400.0,2950.0,4400.0,2950.0,0
+Acclaimed Ability,Krillin,Series 1,23,bronze,STR,Can be recruited from Summons.,3400,2250,,2021-05-25,3400.0,2250.0,0,STR,,,3400.0,2250.0,3400.0,2250.0,0
+Dangerous Cyborg Fighter,Cacao,Series 7,242,silver,Extreme AGL,Can be recruited from Summons.,',3800,,,5900.0,3800.0,0,AGL,extreme,,,3800.0,5900.0,3800.0,0
+Daring Charger,Daiz,Series 7,244,silver,Super PHY,Can be recruited from Summons.,',3800,,,5900.0,3800.0,0,PHY,super,,,3800.0,5900.0,3800.0,0
+Ferocious Physique,Amond,Series 7,243,silver,Extreme STR,Can be recruited from Summons.,',3800,,,5900.0,3800.0,0,STR,extreme,,,3800.0,5900.0,3800.0,0
+Mindpower Destruction,Rasin,Series 7,257,bronze,Extreme TEQ,"Can be recruited from the Story Event ""The Tree of Might"".",',2350,,,3700.0,2350.0,0,TEQ,extreme,,,2350.0,3700.0,2350.0,0
+Twin Blitzer,Lakasei,Series 7,258,bronze,Extreme TEQ,Can be recruited from Summons.,',2350,,,3700.0,2350.0,0,TEQ,extreme,,,2350.0,3700.0,2350.0,0
+The Last Instant Transmission,Super Saiyan Goku,Series 3,100,bronze,STR, Can be recruited during Dokkan Battle & One Piece Crossover Campaign. Currently unable to be recruited.,3900,2600,2021-07-26,2021-09-06,3900.0,2600.0,0,STR,,42.0,3900.0,2600.0,3900.0,2600.0,0
+Inherited Honor,Super Saiyan Vegeta,Series 3,99,bronze,TEQ,Can be recruited from Summons.,3900,2600,2021-07-26,2021-09-06,3900.0,2600.0,0,TEQ,,42.0,3900.0,2600.0,3900.0,2600.0,0
+Pure Confidence,Super Vegeta,Series 3,88,silver,Super AGL,Can be recruited from Summons.,6300,4200,2021-07-26,2021-09-06,6300.0,4200.0,0,AGL,super,42.0,6300.0,4200.0,6300.0,4200.0,0
+Danger Sense,Krillin,Series 4,139,bronze,INT,Can be recruited from Summons.,2200,3300,,2021-12-15,2200.0,3300.0,0,INT,,,2200.0,3300.0,2200.0,3300.0,0
+Innocent Assault,Majin Buu (Good),Series 5,182,bronze,TEQ,"Can be recruited from the Dokkan Event ""Pure Destruction and Carnage"".",4050,2700,,2022-02-08,4050.0,2700.0,0,TEQ,,,4050.0,2700.0,4050.0,2700.0,0
+Bulging Power,Super Saiyan Goku,Series 3,85,silver,Super INT, 6th World Tournament Overall Ranking Reward. 4th World Tournament Overall Ranking Reward.,6150,4100,2021-07-26,2021-09-06,6150.0,4100.0,0,INT,super,42.0,6150.0,4100.0,6150.0,4100.0,0
+Extra Bulge,Gotenks (Failure) A,Series 5,176,bronze,PHY,"Can be recruited from the Strike Event ""Success? Fail? A Fusion of Super Forces"".",3150,2100,,2022-02-08,3150.0,2100.0,0,PHY,,,3150.0,2100.0,3150.0,2100.0,0
+Early Exhaustion,Gotenks (Failure) B,Series 5,177,bronze,TEQ,"Can be recruited from the Strike Event ""Success? Fail? A Fusion of Super Forces"".",3150,2100,,2022-02-08,3150.0,2100.0,0,TEQ,,,3150.0,2100.0,3150.0,2100.0,0
+Mighty Mettle,Master Roshi (Max Power),Series 6,212,bronze,INT,Can be recruited from Summons.,3400,2250,,,3400.0,2250.0,0,INT,,,3400.0,2250.0,3400.0,2250.0,0
+Unexpected Use,Jaco,Series 6,213,bronze,TEQ,Can be recruited from Summons.,3000,2000,,,3000.0,2000.0,0,TEQ,,,3000.0,2000.0,3000.0,2000.0,0
+Netherworld Demon,Super Janemba,Series 3,84,gold,Extreme INT,[Wickedness Personified] Super Janemba's Dokkan Awakened form.,8950,7450,2021-07-26,2021-09-06,8950.0,7450.0,1,INT,extreme,42.0,8950.0,7450.0,8950.0,7450.0,1
+Enraged Onslaught,Super Saiyan Goten (Kid),Series 4,125,silver,Super TEQ,Can be recruited from Summons.,3850,5750,,2021-12-15,3850.0,5750.0,0,TEQ,super,,3850.0,5750.0,3850.0,5750.0,0
+Defying the All-Powerful,Super Saiyan Trunks (Kid),Series 4,126,silver,Super INT,Can be recruited from Summons.,3850,5750,,2021-12-15,3850.0,5750.0,0,INT,super,,3850.0,5750.0,3850.0,5750.0,0
+Almighty Fusion,Super Gogeta,Series 3,80,gold,Super STR,Can be recruited from Dokkan Festivals.,9050,7550,2021-07-26,2021-09-06,9050.0,7550.0,1,STR,super,42.0,9050.0,7550.0,9050.0,7550.0,1
+Destructive Whim,Beerus,Series 6,215,bronze,AGL,7th World Tournament Overall Ranking Reward.,4500,3000,,,4500.0,3000.0,0,AGL,,,4500.0,3000.0,4500.0,3000.0,0
+Imprinted Discipline,Whis,Series 6,195,gold,Super TEQ,[Enigmatic Power] Whis' Dokkan Awakened form.,8750,7300,,,8750.0,7300.0,1,TEQ,super,,8750.0,7300.0,8750.0,7300.0,1
+The Future Bearer,Gohan (Future),Series 2,51,silver,Super PHY,"Can be recruited from the Story Event ""Fight Against Despair!"".",5800,3850,2021-05-03,2021-07-26,5800.0,3850.0,0,PHY,super,84.0,5800.0,3850.0,5800.0,3850.0,0
+Explosive Vengeance,Mecha Frieza,Series 2,73,bronze,PHY,"Can be recruited from the Strike Event ""Vicious Mechanical Monarch"".",3100,2050,2021-05-03,2021-07-26,3100.0,2050.0,0,PHY,,84.0,3100.0,2050.0,3100.0,2050.0,0
+State of Calmness,Whis,Series 6,218,bronze,PHY,Can be recruited from Summons.,4100,2750,,,4100.0,2750.0,0,PHY,,,4100.0,2750.0,4100.0,2750.0,0
+Swan Song,Beerus,Series 6,201,silver,Super TEQ,[Carnage Awakens] Beerus' Dokkan Awakened form.,6350,4250,,,6350.0,4250.0,0,TEQ,super,,6350.0,4250.0,6350.0,4250.0,0
+Terrestrial Flash,Android #16,Series 3,94,silver,Extreme INT,[Great Power Unleashed] Android #16's Dokkan Awakened form.,6150,4100,2021-07-26,2021-09-06,6150.0,4100.0,0,INT,extreme,42.0,6150.0,4100.0,6150.0,4100.0,0
+Unprecedented Majin,Majin Buu (Good),Series 4,128,silver,Extreme STR,Can be recruited from Summons.,4200,6300,,2021-12-15,4200.0,6300.0,0,STR,extreme,,4200.0,6300.0,4200.0,6300.0,0
+Mystical Body,Botamo,Series 8,288,bronze,PHY,Can be recruited from Summons.,3750,2550,,,3750.0,2550.0,0,PHY,,,3750.0,2550.0,3750.0,2550.0,0
+Evil Nature,Frost (Final Form),Series 8,289,bronze,AGL,Can be recruited from Summons.,3800,2550,,,3800.0,2550.0,0,AGL,,,3800.0,2550.0,3800.0,2550.0,0
+Saiyan from Universe 6,Cabba,Series 8,287,bronze,TEQ,"Can be recruited from the Story Event ""Dragon Ball Super: Universe 6 Saga"".",3900,2600,,,3900.0,2600.0,0,TEQ,,,3900.0,2600.0,3900.0,2600.0,0
+Majin on the Loose,Majin Buu (Good),Series 4,118,gold,Extreme PHY,[A Monster Unleashed] Majin Buu (Good)'s Dokkan Awakened form.,7450,8950,,2021-12-15,7450.0,8950.0,1,PHY,extreme,,7450.0,8950.0,7450.0,8950.0,1
+Heroic Victory Declaration,Super Saiyan Gotenks,Series 5,162,silver,Super STR,[Masterful Comeback] Super Saiyan Gotenks's Dokkan Awakened form.,5900,3950,,2022-02-08,5900.0,3950.0,0,STR,super,,5900.0,3950.0,5900.0,3950.0,0
+Proud Heir,Super Saiyan God SS Vegeta,Series 4,127,silver,Super TEQ,Can be recruited from Summons.,4300,6450,,2021-12-15,4300.0,6450.0,0,TEQ,super,,4300.0,6450.0,4300.0,6450.0,0
+Everlasting Legend,Super Saiyan Goku,Series 1,1,platinum,Super TEQ,"Can be recruited from the Prime Battle Event ""Transcended Warrior"".",10800,10800,,2021-05-25,10800.0,10800.0,1,TEQ,super,,10800.0,10800.0,10800.0,10800.0,1
+Countdown to Despair,Majin Buu (Ultimate Gohan),Series 5,155,gold,Extreme INT,[Ultimate Majin Menace] Majin Buu (Ultimate Gohan)'s Dokkan Awakened form.,9000,7500,,2022-02-08,9000.0,7500.0,1,INT,extreme,,9000.0,7500.0,9000.0,7500.0,1
+Ultimate Majin Menace,Majin Buu (Ultimate Gohan),Series 5,167,silver,Extreme INT,Can be recruited from Dokkan Festivals.,6300,4200,,2022-02-08,6300.0,4200.0,0,INT,extreme,,6300.0,4200.0,6300.0,4200.0,0
+Raging Dash,Majin Buu (South Supreme Kai),Series 5,168,silver,Extreme TEQ,[Relentless Onslaught] Buu (Kid)'s Dokkan Awakened form.,5800,3850,,2022-02-08,5800.0,3850.0,0,TEQ,extreme,,5800.0,3850.0,5800.0,3850.0,0
+Sword of Courage,Trunks (Kid),Series 2,53,silver,Super TEQ,[Wish Entrusted by the Hero] Trunks (Kid)'s Dokkan Awakened form.,5600,3750,2021-05-03,2021-07-26,5600.0,3750.0,0,TEQ,super,84.0,5600.0,3750.0,5600.0,3750.0,0
+A Future Destroyed,Goku Black,Series 7,255,bronze,Extreme TEQ,"Can be recruited from the Dokkan Event ""The Darkness Shrouding the Future"".",',2800,,,3700.0,2800.0,0,TEQ,extreme,,,2800.0,3700.0,2800.0,0
+The Paramount Saiyan,Super Saiyan God SS Goku,Series 4,117,gold,Super AGL,[A God Evolved] Super Saiyan God SS Goku's Dokkan Awakened form.,7600,9100,,2021-12-15,7600.0,9100.0,1,AGL,super,,7600.0,9100.0,7600.0,9100.0,1
+Perfect Supremacy,Golden Frieza,Series 4,121,gold,Extreme TEQ,Can be recruited from Dokkan Festivals.,7600,9100,,2021-12-15,7600.0,9100.0,1,TEQ,extreme,,7600.0,9100.0,7600.0,9100.0,1
+Agile Dash,Androids #17 & #18,Series 3,95,silver,Extreme AGL,[Unbridled Horror] Androids #17 & #18's Dokkan Awakened form.,6150,4100,2021-07-26,2021-09-06,6150.0,4100.0,0,AGL,extreme,42.0,6150.0,4100.0,6150.0,4100.0,0
+Limitless Energy,Androids #17 & #18,Series 2,39,platinum,Extreme AGL,[Ingenious Collaboration] Androids #17 & #18's Dokkan Awakened form.,10900,10900,2021-05-03,2021-07-26,10900.0,10900.0,1,AGL,extreme,84.0,10900.0,10900.0,10900.0,10900.0,1
+Welcome to Hell,Perfect Cell,Series 3,81,gold,Extreme STR,[Systematic Victory] Perfect Cell's Dokkan Awakened form.,8900,7400,2021-07-26,2021-09-06,8900.0,7400.0,1,STR,extreme,42.0,8900.0,7400.0,8900.0,7400.0,1
+Deepening Darkness,Goku Black,Series 7,238,silver,Extreme PHY,Can be recruited from Dokkan Festivals.,',4100,,,5900.0,4100.0,0,PHY,extreme,,,4100.0,5900.0,4100.0,0
+Fighting Eradication,Mai (Future),Series 7,249,bronze,Super INT,Can be recruited from Summons.,',2250,,,3700.0,2250.0,0,INT,super,,,2250.0,3700.0,2250.0,0
+Iron Fist of Justice,Great Saiyaman,Series 4,134,bronze,AGL,Can be recruited from Baba's Shop.,2450,3700,,2021-12-15,2450.0,3700.0,0,AGL,,,2450.0,3700.0,2450.0,3700.0,0
+Miraculous Re-Fusion,Super Saiyan God SS Vegito,Series 7,224,gold,Super PHY,Can be recruited from Dokkan Festivals.,',7500,,,8650.0,7500.0,1,PHY,super,,,7500.0,8650.0,7500.0,1
+Exalted Ideals,Goku Black (Super Saiyan Rosé),Series 7,228,gold,Extreme AGL,Can be recruited from Dokkan Festivals.,',7300,,,8650.0,7300.0,1,AGL,extreme,,,7300.0,8650.0,7300.0,1
+Reign of Terror,Frieza (1st Form),Series 1,2,platinum,Extreme STR,"Can be recruited from the Prime Battle Event ""Summit of the Universe"".",10500,10500,,2021-05-25,10500.0,10500.0,1,STR,extreme,,10500.0,10500.0,10500.0,10500.0,1
+Raging Wickedness,Super Janemba,Series 3,96,silver,Extreme AGL,[Aggregate of Evil] Janemba's Dokkan Awakened form.,6350,4250,2021-07-26,2021-09-06,6350.0,4250.0,0,AGL,extreme,42.0,6350.0,4250.0,6350.0,4250.0,0
+The Spirited Golden Warrior,Super Saiyan Gohan (Teen),Series 4,124,silver,Super STR, 20th World Tournament Overall Ranking Reward. 17th World Tournament Overall Ranking Reward.,4100,6150,,2021-12-15,4100.0,6150.0,0,STR,super,,4100.0,6150.0,4100.0,6150.0,0
+Indomitable Battle Lust,Super Saiyan God SS Goku,Series 7,245,bronze,Super STR,Can be recruited from Summons.,',2950,,,3700.0,2950.0,0,STR,super,,,2950.0,3700.0,2950.0,0
+Saiyan Tenacity,Super Saiyan God SS Vegeta,Series 7,246,bronze,Super TEQ,Can be recruited from Summons.,',2950,,,3700.0,2950.0,0,TEQ,super,,,2950.0,3700.0,2950.0,0
+Standing Defiant,Trunks (Teen) (Future),Series 7,248,bronze,Super STR,"Can be recruited from the Story Event ""Dragon Ball Super: Future Trunks Saga"".",',2450,,,3700.0,2450.0,0,STR,super,,,2450.0,3700.0,2450.0,0
+The Future's Last Hope,Super Saiyan Trunks (Future),Series 7,235,silver,Super INT,Can be recruited from Dokkan Festivals.,',4000,,,5900.0,4000.0,0,INT,super,,,4000.0,5900.0,4000.0,0
+Bringer of Light Fusion,Zamasu,Series 7,241,silver,Extreme TEQ,Can be recruited from Dokkan Festivals.,',4350,,,5900.0,4350.0,0,TEQ,extreme,,,4350.0,5900.0,4350.0,0
+Halo of Destruction Fusion,Zamasu,Series 7,256,bronze,Extreme PHY,"Can be recruited from the Dokkan Event ""Eternal God, Distorter of Worlds"".",',3000,,,3700.0,3000.0,0,PHY,extreme,,,3000.0,3700.0,3000.0,0
+A Will Beyond Time,Super Saiyan Trunks (Future),Series 7,233,silver,Super PHY,[Lightning-Fast Strike] Super Saiyan Trunks (Future)'s Dokkan Awakened form.,',4050,,,5900.0,4050.0,0,PHY,super,,,4050.0,5900.0,4050.0,0
+Bonds Beyond Time,Super Saiyan God SS Vegeta,Series 7,234,silver,Super TEQ,[Saiyan Tenacity] Super Saiyan God SS Vegeta's Dokkan Awakened form.,',4200,,,5900.0,4200.0,0,TEQ,super,,,4200.0,5900.0,4200.0,0
+Uncontrollable Rage,Super Saiyan God SS Vegeta,Series 7,226,gold,Super INT,Can be recruited from Dokkan Festivals.,',7350,,,8650.0,7350.0,1,INT,super,,,7350.0,8650.0,7350.0,1
+Convergent Fury,Super Trunks,Series 3,79,gold,Super PHY,[Swelling Power] Super Trunks' Dokkan Awakened form.,8700,7250,2021-07-26,2021-09-06,8700.0,7250.0,1,PHY,super,42.0,8700.0,7250.0,8700.0,7250.0,1
+Thrill of the Fight,Beerus,Series 6,200,silver,Super AGL,[Destructive Whim] Beerus' Dokkan Awakened form.,6450,4300,,,6450.0,4300.0,0,AGL,super,,6450.0,4300.0,6450.0,4300.0,0
+Full-Tilt Kamehameha,Super Saiyan 2 Gohan (Youth),Series 3,75,platinum,Super INT,[Fatal Resolve] Super Saiyan 2 Gohan (Youth)'s Dokkan Awakened form.,11000,11000,2021-07-26,2021-09-06,11000.0,11000.0,1,INT,super,42.0,11000.0,11000.0,11000.0,11000.0,1
+Time for a Quick Break,Android #18,Series 3,108,bronze,TEQ,Can be recruited from Summons.,3500,2350,2021-07-26,2021-09-06,3500.0,2350.0,0,TEQ,,42.0,3500.0,2350.0,3500.0,2350.0,0
+Flowers on the Battlefield,Mai (Future),Series 7,250,bronze,Super AGL,Can be recruited from Summons.,',2250,,,3700.0,2250.0,0,AGL,super,,,2250.0,3700.0,2250.0,0
+Beyond the Ferocious Flash,Majin Vegeta,Series 4,112,platinum,Extreme AGL,[The Final Clash] Majin Vegeta's Dokkan Awakened form.,11100,11100,,2021-12-15,11100.0,11100.0,1,AGL,extreme,,11100.0,11100.0,11100.0,11100.0,1
+Risky Super Attack,Tien,Series 3,89,silver,Super TEQ,Can be recruited from Type-Exclusive Summons.,5600,3750,2021-07-26,2021-09-06,5600.0,3750.0,0,TEQ,super,42.0,5600.0,3750.0,5600.0,3750.0,0
+Advancing Ambition,Vegeta,Series 1,15,silver,Extreme INT,Can be recruited from Type-Exclusive Summons.,5700,3800,,2021-05-25,5700.0,3800.0,0,INT,extreme,,5700.0,3800.0,5700.0,3800.0,0
+Astounding Transformation,Super Saiyan 3 Goku (Angel),Series 4,116,gold,Super TEQ,[Extreme Power Brawl] Super Saiyan 3 Goku (Angel)'s Dokkan Awakened form.,7450,8950,,2021-12-15,7450.0,8950.0,1,TEQ,super,,7450.0,8950.0,7450.0,8950.0,1
+Merciless Swift Strike,Zangya,Series 5,183,bronze,AGL,[Brutal Battlefield Diva] Zangya's Dokkan Awakened form.,3450,2300,,2022-02-08,3450.0,2300.0,0,AGL,,,3450.0,2300.0,3450.0,2300.0,0
+Accelerated Battle,Super Saiyan God Goku,Series 6,196,silver,Super INT,[Saiyan Savior of Legend] Super Saiyan God Goku's Dokkan Awakened form.,6350,4250,,,6350.0,4250.0,0,INT,super,,6350.0,4250.0,6350.0,4250.0,0
+Fateful Strike,Super Saiyan God Goku,Series 6,188,gold,Super PHY,[State of God] Super Saiyan God Goku's Dokkan Awakened form.,8800,7350,,,8800.0,7350.0,1,PHY,super,,8800.0,7350.0,8800.0,7350.0,1
+Destruction Descending,Buu (Super),Series 5,166,silver,Extreme TEQ,[Savage Battle Instinct] Buu (Super)'s Dokkan Awakened form.,6000,4000,,2022-02-08,6000.0,4000.0,0,TEQ,extreme,,6000.0,4000.0,6000.0,4000.0,0
+Training at the Sanctuary,Gohan (Teen),Series 5,171,bronze,INT,Can be recruited from Baba's Shop.,4100,2750,,2022-02-08,4100.0,2750.0,0,INT,,,4100.0,2750.0,4100.0,2750.0,0
+Strike From on High,Dabura,Series 4,120,gold,Extreme INT,[Demon King's Oppression] Dabura's Dokkan Awakened form.,7400,8900,,2021-12-15,7400.0,8900.0,1,INT,extreme,,7400.0,8900.0,7400.0,8900.0,1
+Special Transformation,Super Saiyan 3 Gotenks,Series 5,153,gold,Super PHY,Can be recruited from Dokkan Festivals.,8650,7200,,2022-02-08,8650.0,7200.0,1,PHY,super,,8650.0,7200.0,8650.0,7200.0,1
+Merciless Condemnation,Goku Black (Super Saiyan Rosé) & Zamasu,Series 7,223,platinum,Extreme TEQ,[Distorted Justice] Goku Black & Zamasu's Dokkan Awakened form.,',11350,,,11075.0,11350.0,1,TEQ,extreme,,,11350.0,11075.0,11350.0,1
+To a New Future,Super Saiyan Trunks (Future),Series 6,192,gold,Super INT,[The Future Changer] Super Saiyan Trunks (Future)'s Dokkan Awakened form.,8600,7150,,,8600.0,7150.0,1,INT,super,,8600.0,7150.0,8600.0,7150.0,1
+Signs of Awakening,Gohan (Youth),Series 3,97,silver,INT, 22nd World Tournament Overall Ranking Reward. 19th World Tournament Overall Ranking Reward.,3400,2250,2021-07-26,2021-09-06,3400.0,2250.0,0,INT,,42.0,3400.0,2250.0,3400.0,2250.0,0
+Solitary Warrior,Vegeta,Series 2,66,bronze,STR,Distributed during a campaign.,3100,2050,2021-05-03,2021-07-26,3100.0,2050.0,0,STR,,84.0,3100.0,2050.0,3100.0,2050.0,0
+Second Super Saiyan Super,Saiyan Trunks (Teen),Series 2,38,platinum,Super PHY,[Startling Super Warrior] Super Saiyan Trunks (Teen)'s Dokkan Awakened form.,10600,10600,2021-05-03,2021-07-26,10600.0,10600.0,1,PHY,super,84.0,10600.0,10600.0,10600.0,10600.0,1
+Perfected Strength,Ultimate Gohan,Series 5,152,gold,Super STR,Can be recruited from Dokkan Festivals.,8750,7300,,2022-02-08,8750.0,7300.0,1,STR,super,,8750.0,7300.0,8750.0,7300.0,1
+Wise Warrior,Piccolo,Series 8,271,silver,Super INT,[Sage from Universe 7] Piccolo's Dokkan Awakened form.,6100,4050,,,6100.0,4050.0,0,INT,super,,6100.0,4050.0,6100.0,4050.0,0
+Vengeful Witchcraft,Yurin,Series 8,286,bronze,TEQ,"Can be recruited from the Story Event ""Dragon Ball Super: Universe Survival Saga"".",3000,2000,,,3000.0,2000.0,0,TEQ,,,3000.0,2000.0,3000.0,2000.0,0
+Thirst for the Spotlight,Majin Buu (Shape-Up),Series 8,285,bronze,AGL,Can be recruited from Summons.,4050,2700,,,4050.0,2700.0,0,AGL,,,4050.0,2700.0,4050.0,2700.0,0
+Time in Hell Frieza,(Final Form) (Angel),Series 8,282,bronze,STR,"Can be recruited from the Story Event ""Dragon Ball Super: Universe Survival Saga"".",3600,2400,,,3600.0,2400.0,0,STR,,,3600.0,2400.0,3600.0,2400.0,0
+Emperor's True Splendor,Golden Frieza (Angel),Series 8,263,gold,Extreme INT,[Revived Emperor] Golden Frieza (Angel)'s Dokkan Awakened form.,8700,7250,,,8700.0,7250.0,1,INT,extreme,,8700.0,7250.0,8700.0,7250.0,1
+Strength of a God,Supreme Kai,Series 4,137,bronze,TEQ,"Can be recruited from the Story Event ""The Unknown Battle of Gods and Majin"".",2500,3750,,2021-12-15,2500.0,3750.0,0,TEQ,,,2500.0,3750.0,2500.0,3750.0,0
+Incomparable Opponent,Full Power Boujack,Series 5,158,gold,Extreme INT,[Resurrection from the Seal] Boujack's Dokkan Awakened form.,8650,7200,,2022-02-08,8650.0,7200.0,1,INT,extreme,,8650.0,7200.0,8650.0,7200.0,1
+The Desired Battle,Goku,Series 8,281,bronze,PHY,"Can be recruited from the Story Event ""Dragon Ball Super: Universe Survival Saga"".",4300,2850,,,4300.0,2850.0,0,PHY,,,4300.0,2850.0,4300.0,2850.0,0
+Primal Roar,Kakunsa,Series 8,291,bronze,AGL,"Can be recruited from the Story Event ""Spread Love! Magical Girl Fighters!"".",4000,2650,,,4000.0,2650.0,0,AGL,,,4000.0,2650.0,4000.0,2650.0,0
+Strike of Love With Dreams and Magic,Rozie,Series 8,292,bronze,INT,"Can be recruited from the Story Event ""Spread Love! Magical Girl Fighters!"".",4000,2650,,,4000.0,2650.0,0,INT,,,4000.0,2650.0,4000.0,2650.0,0
+Drive to Win,Super Saiyan God SS Goku,Series 7,232,silver,Super STR,[Indomitable Battle Lust] Super Saiyan God SS Goku's Dokkan Awakened form.,',4200,,,5900.0,4200.0,0,STR,super,,,4200.0,5900.0,4200.0,0
+Tide-Turning Power-Up,Gokua,Series 5,170,silver,Extreme STR,[Sky-Splitting Sword] Gokua's Dokkan Awakened form.,5700,3800,,2022-02-08,5700.0,3800.0,0,STR,extreme,,5700.0,3800.0,5700.0,3800.0,0
+Phantom Majin Sealed Within,Tapion (Hirudegarn),Series 2,47,gold,Super AGL,[Hero's Secret] Tapion (Hirudegarn)'s Dokkan Awakened form.,9000,7500,2021-05-03,2021-07-26,9000.0,7500.0,1,AGL,super,84.0,9000.0,7500.0,9000.0,7500.0,1
+Mixed Feelings,Vegeta,Series 6,208,bronze,AGL,"Can be recruited from the Story Event ""Vegeta the Indomitable Warrior"".",3750,2500,,,3750.0,2500.0,0,AGL,,,3750.0,2500.0,3750.0,2500.0,0
+Furious Transformation,Super Saiyan 2 Vegeta & Bulma,Series 6,197,silver,Super AGL,[Mixed Feelings] Vegeta's Dokkan Awakened form.,6000,4000,,,6000.0,4000.0,0,AGL,super,,6000.0,4000.0,6000.0,4000.0,0
+Determined to Fight Back,Super Saiyan 2 Vegeta,Series 6,198,silver,Super STR,Can be recruited from Summons.,5850,3900,,,5850.0,3900.0,0,STR,super,,5850.0,3900.0,5850.0,3900.0,0
+Outburst of Emotions,Super Saiyan 2 Vegeta & Bulma,Series 6,189,gold,Super STR,[Determined to Fight Back] Super Saiyan 2 Vegeta's Dokkan Awakened form.,8650,7200,,,8650.0,7200.0,1,STR,super,,8650.0,7200.0,8650.0,7200.0,1
+Wayward God,Beerus,Series 6,194,gold,Super INT,[God of Destruction's Ultimatum] Beerus' Dokkan Awakened form.,8900,7400,,,8900.0,7400.0,1,INT,super,,8900.0,7400.0,8900.0,7400.0,1
+Lone Hero,Tapion,Series 2,52,silver,Super TEQ,Can be recruited from Summons.,5800,3850,2021-05-03,2021-07-26,5800.0,3850.0,0,TEQ,super,84.0,5800.0,3850.0,5800.0,3850.0,0
+New Mission,Super Saiyan Trunks (Future),Series 7,247,bronze,Super AGL,Can be recruited from Summons.,',2750,,,3700.0,2750.0,0,AGL,super,,,2750.0,3700.0,2750.0,0
+Immortal God,Zamasu,Series 7,253,bronze,Extreme AGL,Can be recruited from Summons.,',2750,,,3700.0,2750.0,0,AGL,extreme,,,2750.0,3700.0,2750.0,0
+Terrifying Plan,Zamasu,Series 7,252,bronze,Extreme INT,Can be recruited from Summons.,',2750,,,3700.0,2750.0,0,INT,extreme,,,2750.0,3700.0,2750.0,0
+Utopia Realized,Zamasu,Series 7,240,silver,Extreme INT,[Terrifying Plan] Zamasu's Dokkan Awakened form.,',4200,,,5900.0,4200.0,0,INT,extreme,,,4200.0,5900.0,4200.0,0
+Sprightly Swoop-In,Recoome,Series 1,17,silver,Extreme PHY,"Can be recruited from ""Ginyu Force Special Training"".",6000,4000,,2021-05-25,6000.0,4000.0,0,PHY,extreme,,6000.0,4000.0,6000.0,4000.0,0
+Crush and Conquer,Jeice,Series 1,19,silver,Extreme STR,"Can be recruited from ""Ginyu Force Special Training"".",5900,3950,,2021-05-25,5900.0,3950.0,0,STR,extreme,,5900.0,3950.0,5900.0,3950.0,0
+Arrival of the Super Speedster,Burter,Series 1,18,silver,Extreme AGL,"Can be recruited from ""Ginyu Force Special Training"".",5900,3950,,2021-05-25,5900.0,3950.0,0,AGL,extreme,,5900.0,3950.0,5900.0,3950.0,0
+Surprise Strike,Guldo,Series 1,20,silver,Extreme TEQ,"Can be recruited from ""Ginyu Force Special Training"".",5600,3750,,2021-05-25,5600.0,3750.0,0,TEQ,extreme,,5600.0,3750.0,5600.0,3750.0,0
+Acknowledged Elite,Captain Ginyu,Series 1,9,gold,Extreme INT,"Can be recruited from ""Ginyu Force Special Training"".",8200,6800,,2021-05-25,8200.0,6800.0,1,INT,extreme,,8200.0,6800.0,8200.0,6800.0,1
+Departure Time,Gohan (Kid),Series 1,22,bronze,STR,"Can be recruited from the Story Event ""Fierce Battle for Planet Namek!"".",3100,2050,,2021-05-25,3100.0,2050.0,0,STR,,,3100.0,2050.0,3100.0,2050.0,0
+Dreadful Super Fusion,Super Saiyan 2 Kefla,Series 8,266,gold,Super PHY,[Tight-Knit Fusion Fighter] Super Saiyan Kefla's Dokkan Awakened form.,8800,7350,,,8800.0,7350.0,1,PHY,super,,8800.0,7350.0,8800.0,7350.0,1
+Super Gravity Training,Goku,Series 1,12,silver,Super PHY,Distributed during a campaign.,5900,3950,,2021-05-25,5900.0,3950.0,0,PHY,super,,5900.0,3950.0,5900.0,3950.0,0
+Advent of Beautiful Love,Super Ribrianne,Series 8,293,bronze,STR,"Can be recruited from the Story Event ""Spread Love! Magical Girl Fighters!"".",4100,2750,,,4100.0,2750.0,0,STR,,,4100.0,2750.0,4100.0,2750.0,0
+Power of Pride and Bonds,Super Saiyan 2 Cabba,Series 8,277,silver,Super TEQ,[Pride Awakened] Super Saiyan Cabba's Dokkan Awakened form.,6100,4050,,,6100.0,4050.0,0,TEQ,super,,6100.0,4050.0,6100.0,4050.0,0
+Global Harmony Through Destruction,Beerus & Whis,Series 6,187,platinum,Super STR,[Confidence in Foresight] Beerus' Dokkan Awakened form.,11400,11400,,,11400.0,11400.0,1,STR,super,,11400.0,11400.0,11400.0,11400.0,1
+Rising to the Challenge,Goku,Series 7,227,gold,Super PHY,[The Weight of Hope] Goku's Dokkan Awakened form.,',7000,,,8650.0,7000.0,1,PHY,super,,,7000.0,8650.0,7000.0,1
+Pursuit of Personal Strength,Super Saiyan God SS Vegeta,Series 8,262,gold,AGL,Can be recruited from Dokkan Festivals.,8750,7300,,,8750.0,7300.0,1,AGL,,,8750.0,7300.0,8750.0,7300.0,1
+Power to Face Despair,Super Saiyan Gohan (Future),Series 6,191,gold,Super PHY,[Alternate Future] Super Saiyan Gohan (Future)'s Dokkan Awakened form.,8400,7000,,,8400.0,7000.0,1,PHY,super,,8400.0,7000.0,8400.0,7000.0,1
+Warrior's Duty,Android #17,Series 8,283,bronze,INT,"Can be recruited from the Story Event ""Dragon Ball Super: Universe Survival Saga - Final Battle of the Tournament of Power"".",4200,2800,,,4200.0,2800.0,0,INT,,,4200.0,2800.0,4200.0,2800.0,0
+Love Warrior of Universe 7,Android #18,Series 8,284,bronze,AGL,"Can be recruited from the Story Event ""Dragon Ball Super: Universe Survival Saga - Final Battle of the Tournament of Power"".",4100,2750,,,4100.0,2750.0,0,AGL,,,4100.0,2750.0,4100.0,2750.0,0
+Hopes and Promises for the Future,Trunks (Teen) (Future) & Mai (Future),Series 7,222,platinum,Super STR,[The Duty of Humanity] Trunks (Teen) (Future)'s Dokkan Awakened form.,',11250,,,11075.0,11250.0,1,STR,super,,,11250.0,11075.0,11250.0,1
+Warning From the Future,Goku Black,Series 7,254,bronze,Extreme STR,29th World Tournament Overall Ranking Reward.,',2850,,,3700.0,2850.0,0,STR,extreme,,,2850.0,3700.0,2850.0,0
+Mischievous Curiosity,Mighty Mask,Series 4,135,bronze,PHY, 25th World Tournament Overall Ranking Reward. 21st World Tournament Overall Ranking Reward.,2400,3600,,2021-12-15,2400.0,3600.0,0,PHY,,,2400.0,3600.0,2400.0,3600.0,0
+Determined to Fight,Goku (Kaioken),Series 1,4,gold,Super PHY,[Fearless Saiyan] Goku's Dokkan Awakened form.,8500,7100,,2021-05-25,8500.0,7100.0,1,PHY,super,,8500.0,7100.0,8500.0,7100.0,1
+The Deadly Cell Games,Cell (Perfect Form) & Cell Jr.,Series 3,76,platinum,Extreme PHY,[The Final Battle Begins] Cell (Perfect Form)'s Dokkan Awakened form.,10950,10950,2021-07-26,2021-09-06,10950.0,10950.0,1,PHY,extreme,42.0,10950.0,10950.0,10950.0,10950.0,1
+Fury and Battle Instinct,Super Saiyan Broly,Series 8,268,gold,Extreme INT,[Saiyan Outcast] Broly's Dokkan Awakened form.,8800,7350,,,8800.0,7350.0,1,INT,extreme,,8800.0,7350.0,8800.0,7350.0,1
+Saiyans' Limitless Potential,Vegeta,Series 1,6,gold,Extreme INT,[Advancing Ambition] Vegeta's Dokkan Awakened form.,8100,6750,,2021-05-25,8100.0,6750.0,1,INT,extreme,,8100.0,6750.0,8100.0,6750.0,1
+Roar of Rage,Gohan (Kid),Series 1,4,gold,Super INT,[Unexplored Talent] Gohan (Kid)'s Dokkan Awakened form.,8000,6650,,2021-05-25,8000.0,6650.0,1,INT,super,,8000.0,6650.0,8000.0,6650.0,1
+Rigorous Training,Vegeta,Series 2,54,silver,Extreme INT,"Can be recruited from the Prime Battle ""Pride-Staked Awakening"".",5800,3850,2021-05-03,2021-07-26,5800.0,3850.0,0,INT,extreme,84.0,5800.0,3850.0,5800.0,3850.0,0
+Wrathful Eruption,Majin Buu (Good),Series 5,169,silver,Extreme STR,[Unprecedented Majin] Majin Buu (Good)'s Dokkan Awakened form.,5850,3900,,2022-02-08,5850.0,3900.0,0,STR,extreme,,5850.0,3900.0,5850.0,3900.0,0
+Pursuing Perfection,Cell (2nd Form),Series 3,82,gold,Extreme TEQ,[Obsession with Perfection] Cell (2nd Form)'s Dokkan Awakened form.,8650,7200,2021-07-26,2021-09-06,8650.0,7200.0,1,TEQ,extreme,42.0,8650.0,7200.0,8650.0,7200.0,1
+Dimension-Breaking Roar,Buu (Super),Series 5,165,silver,Extreme PHY,[Nightmare Redux] Buu (Super)'s Dokkan Awakened form.,6100,4050,,2022-02-08,6100.0,4050.0,0,PHY,extreme,,6100.0,4050.0,6100.0,4050.0,0
+Desperate God of Destruction,Beerus (Monaka Costume),Series 6,220,bronze,PHY,"Can be recruited from the Story Event ""Universe's Strongest?! Challenge the ""Great Pontas""!"".",4050,2700,,,4050.0,2700.0,0,PHY,,,4050.0,2700.0,4050.0,2700.0,0
+Fictitious Universe's Strongest,Beerus (Monaka Costume),Series 6,202,silver,Super PHY,[Desperate God of Destruction] Beerus (Monaka Costume)'s Dokkan Awakened form.,6000,4000,,,6000.0,4000.0,0,PHY,super,,6000.0,4000.0,6000.0,4000.0,0
+The Definition of Ultimate Power,Goku Black,Series 7,230,gold,Extreme INT,Can be recruited from Dokkan Festivals.,',7150,,,8650.0,7150.0,1,INT,extreme,,,7150.0,8650.0,7150.0,1
+Brave Pair,Gohan (Teen) & Videl,Series 4,123,silver,Super INT,[Recently-Acquired Flying Prowess] Videl's Dokkan Awakened form.,3700,5550,,2021-12-15,3700.0,5550.0,0,INT,super,,3700.0,5550.0,3700.0,5550.0,0
+Assassin's Ultimate Technique,Hit,Series 8,265,gold,Extreme TEQ,[Mysterious Pressure] Hit's Dokkan Awakened form.,8700,7250,,,8700.0,7250.0,1,TEQ,extreme,,8700.0,7250.0,8700.0,7250.0,1
+Desperate Showdown,Super Saiyan 2 Goku (Angel),Series 4,115,gold,Super AGL,[Clashing Tenacity] Super Saiyan 2 Goku (Angel)'s Dokkan Awakened form.,7400,8900,,2021-12-15,7400.0,8900.0,1,AGL,super,,7400.0,8900.0,7400.0,8900.0,1
+Non-Negotiable Resolve,Majin Vegeta,Series 4,119,gold,Extreme STR,[Clashing Pride] Majin Vegeta's Dokkan Awakened form.,7400,8900,,2021-12-15,7400.0,8900.0,1,STR,extreme,,7400.0,8900.0,7400.0,8900.0,1
+Vengeful Survivor,Paragus,Series 8,294,bronze,INT,Can be recruited from Summons.,3700,2450,,,3700.0,2450.0,0,INT,,,3700.0,2450.0,3700.0,2450.0,0
+Low-Class Warrior Exiled to Earth,Goku,Series 8,275,silver,AGL,"Can be recruited from the Story Event ""Dragon Ball Super: Broly"".",6000,4000,,,6000.0,4000.0,0,AGL,,,6000.0,4000.0,6000.0,4000.0,0
+Prince of the Lost Planet,Vegeta,Series 8,276,silver,TEQ,"Can be recruited from the Story Event ""Dragon Ball Super: Broly"".",6000,4000,,,6000.0,4000.0,0,TEQ,,,6000.0,4000.0,6000.0,4000.0,0
+Tyrannical Despot,Frieza (Final Form),Series 8,295,bronze,PHY,"Can be recruited from the Story Event ""Dragon Ball Super: Broly"".",4200,2800,,,4200.0,2800.0,0,PHY,,,4200.0,2800.0,4200.0,2800.0,0
+Two Makes the Strongest of All Universes,Super Saiyan 2 Caulifla & Super Saiyan 2 Kale,Series 8,260,platinum,Super AGL,[Vow to Grow] Super Saiyan Caulifla & Super Saiyan Kale's Dokkan Awakened form.,11350,11350,,,11350.0,11350.0,1,AGL,super,,11350.0,11350.0,11350.0,11350.0,1
+In the Name of Survival,Saonel & Pirina,Series 8,290,bronze,TEQ,"Can be recruited from the Story Event ""Assemble! Warriors of Universe 6"".",3750,2550,,,3750.0,2550.0,0,TEQ,,,3750.0,2550.0,3750.0,2550.0,0
+Radiant Battle,Trunks (Teen),Series 5,164,silver,Super INT, 36th World Tournament Overall Ranking Reward. 34th World Overall Tournament Ranking Reward.,5650,3750,,2022-02-08,5650.0,3750.0,0,INT,super,,5650.0,3750.0,5650.0,3750.0,0
+Hatred Unleashed,Mecha Frieza,Series 2,59,silver,Extreme TEQ, 35th World Tournament Overall Ranking Reward 33rd World Tournament Overall Ranking Reward,5600,3750,2021-05-03,2021-07-26,5600.0,3750.0,0,TEQ,extreme,84.0,5600.0,3750.0,5600.0,3750.0,0
+Instructor of Gods,Gowasu,Series 7,251,bronze,Super PHY,Can be recruited from Summons.,',2650,,,3700.0,2650.0,0,PHY,super,,,2650.0,3700.0,2650.0,0
+New Resolution for the Future,Trunks (Teen) (Future),Series 7,225,gold,Super TEQ,Can be recruited from Dokkan Festivals.,',7150,,,8650.0,7150.0,1,TEQ,super,,,7150.0,8650.0,7150.0,1
+True Power of a God,Zamasu,Series 7,229,gold,Extreme AGL,[Intoxicated with the Execution of Justice] Zamasu's Dokkan Awakened form.,',7100,,,8650.0,7100.0,1,AGL,extreme,,,7100.0,8650.0,7100.0,1
+Pinnacle of Fury,Goku,Series 1,3,gold,Super STR,[The Final Trump Card] Goku's Dokkan Awakened form.,8800,7300,,2021-05-25,8800.0,7300.0,1,STR,super,,8800.0,7300.0,8800.0,7300.0,1
+Into the Final Phase,Gogeta,Series 8,264,gold,Super STR,[Last Resort] Gogeta's Dokkan Awakened form.,8900,7400,,,8900.0,7400.0,1,STR,super,,8900.0,7400.0,8900.0,7400.0,1
+Mysterious Monster,Cell (1st Form),Series 3,91,silver,Extreme TEQ,"Can be recruited from the Prime Battle ""Looming Menace"".",6000,4000,2021-07-26,2021-09-06,6000.0,4000.0,0,TEQ,extreme,42.0,6000.0,4000.0,6000.0,4000.0,0
+Imperturbable Namekian Warrior,Piccolo,Series 2,42,gold,Super PHY,Can be recruited from Dokkan Festivals.,8200,6800,2021-05-03,2021-07-26,8200.0,6800.0,1,PHY,super,84.0,8200.0,6800.0,8200.0,6800.0,1
+Dispersion of Evil,Cell Jr.,Series 3,83,gold,Extreme AGL,[Gruesome Proliferation] Cell Jr.'s Dokkan Awakened form.,8800,7350,2021-07-26,2021-09-06,8800.0,7350.0,1,AGL,extreme,42.0,8800.0,7350.0,8800.0,7350.0,1
+Resolution in Battle,Super Saiyan Gohan (Youth),Series 3,78,gold,Super AGL,Can be recruited from Dokkan Festivals.,8750,7300,2021-07-26,2021-09-06,8750.0,7300.0,1,AGL,super,42.0,8750.0,7300.0,8750.0,7300.0,1
+Intense Training Completed,Vegeta,Series 3,87,silver,Super STR,"Can be recruited from the Story Event ""Emerge! Mysterious Monster Cell"".",5850,3900,2021-07-26,2021-09-06,5850.0,3900.0,0,STR,super,42.0,5850.0,3900.0,5850.0,3900.0,0
+Shocking Contact,Android #18,Series 2,58,silver,Extreme STR,[Beloved Girl Fighter] Android #18's Dokkan Awakened form.,6100,4050,2021-05-03,2021-07-26,6100.0,4050.0,0,STR,extreme,84.0,6100.0,4050.0,6100.0,4050.0,0
+Unwavering Will and Newfound Power,Super Saiyan Goku,Series 2,40,gold,Super INT,[Return from Outer Space] Goku's Dokkan Awakened form.,8500,7050,2021-05-03,2021-07-26,8500.0,7050.0,1,INT,super,84.0,8500.0,7050.0,8500.0,7050.0,1
+Answers Found in Training,Super Saiyan Goku/Super Saiyan Gohan (Youth),Series 3,77,gold,Super TEQ,[Aim to Surpass] Super Saiyan Goku's Dokkan Awakened form.,8500,7100,2021-07-26,2021-09-06,8500.0,7100.0,1,TEQ,super,42.0,8500.0,7100.0,8500.0,7100.0,1
+Ready to Fight,Krillin,Series 2,48,silver,Super INT,Can be recruited from Baba's Shop.,5500,3700,2021-05-03,2021-07-26,5500.0,3700.0,0,INT,super,84.0,5500.0,3700.0,5500.0,3700.0,0
+Foolish Warm-Up,Hercule,Series 3,102,bronze,STR,Distributed during a campaign.,3000,2000,2021-07-26,2021-09-06,3000.0,2000.0,0,STR,,42.0,3000.0,2000.0,3000.0,2000.0,0
+Lethal Android,Android #17 (Future),Series 6,205,silver,Extreme TEQ,[Wanton Slaughter] Android #17 (Future)'s Dokkan Awakened form.,5700,3800,,,5700.0,3800.0,0,TEQ,extreme,,5700.0,3800.0,5700.0,3800.0,0
+Destructive Android,Android #18 (Future),Series 6,206,silver,Extreme STR,[Willful Destruction] Android #18 (Future)'s Dokkan Awakened form.,5700,3800,,,5700.0,3800.0,0,STR,extreme,,5700.0,3800.0,5700.0,3800.0,0
+Bloodcurdling Activation,Androids #17 & #18,Series 3,92,silver,Extreme PHY,Can be recruited from Legendary Summons.,6200,4150,2021-07-26,2021-09-06,6200.0,4150.0,0,PHY,extreme,42.0,6200.0,4150.0,6200.0,4150.0,0
+Legend Reborn,Super Saiyan God Goku,Series 6,186,platinum,Super INT,[Defying God] Super Saiyan Goku's Dokkan Awakened form.,11300,11300,,,11300.0,11300.0,1,INT,super,,11300.0,11300.0,11300.0,11300.0,1
+The Tiniest Top-Notch Hero,Vegito (Candy),Series 5,159,silver,Super TEQ,[World's Strongest Candy] Vegito (Candy)'s Dokkan Awakened form.,6300,4200,,2022-02-08,6300.0,4200.0,0,TEQ,super,,6300.0,4200.0,6300.0,4200.0,0
+All-Out Resistance,Great Saiyaman (SS),Series 4,114,gold,Super STR,[Full-Throttled Interception] Great Saiyaman's Dokkan Awakened form.,7350,8800,,2021-12-15,7350.0,8800.0,1,STR,super,,7350.0,8800.0,7350.0,8800.0,1
+Challenge from the Demon Realm,Dabura,Series 4,130,silver,Extreme PHY,Can be recruited from Summons.,4150,6200,,2021-12-15,4150.0,6200.0,0,PHY,extreme,,4150.0,6200.0,4150.0,6200.0,0
+Creeping Conspiracy,Yamu & Spopovich,Series 4,131,silver,Extreme AGL,[Evil Shadow] Spopovich's Dokkan Awakened form.,3650,5500,,2021-12-15,3650.0,5500.0,0,AGL,extreme,,3650.0,5500.0,3650.0,5500.0,0
+Cunning Counterattack,Bergamo (Giant Form),Series 8,280,silver,Extreme PHY,[Limitless Power] Bergamo (Giant Form)'s Dokkan Awakened form.,5800,3850,,,5800.0,3850.0,0,PHY,extreme,,5800.0,3850.0,5800.0,3850.0,0
+He Who Dreams of a Perfect World,Zamasu,Series 7,239,silver,Extreme STR,[Supreme Kai's Shady Apprentice] Zamasu's Dokkan Awakened form.,',4150,,,5900.0,4150.0,0,STR,extreme,,,4150.0,5900.0,4150.0,0
+Saiyan of a New Dimension,Super Saiyan Goku,Series 6,190,gold,Super INT,[Godly Impact] Super Saiyan God Goku's Dokkan Awakened form.,8700,7250,,,8700.0,7250.0,1,INT,super,,8700.0,7250.0,8700.0,7250.0,1
+Human Pride,Super Saiyan Trunks (Future) & Mai (Future),Series 7,236,silver,Super AGL,[Raging Resistance] Super Saiyan Trunks (Future)'s Dokkan Awakened form.,',4150,,,5900.0,4150.0,0,AGL,super,,,4150.0,5900.0,4150.0,0
+Hot-Blooded God of Destruction,Beerus,Series 6,193,gold,Super PHY,[Premonition of a Great Fight] Beerus' Dokkan Awakened form.,9000,7500,,,9000.0,7500.0,1,PHY,super,,9000.0,7500.0,9000.0,7500.0,1
+Godlike Skill,Whis,Series 6,219,bronze,STR,Can be recruited from Summons.,4200,2800,,,4200.0,2800.0,0,STR,,,4200.0,2800.0,4200.0,2800.0,0
+Best Measure,Whis,Series 6,204,silver,Super STR,[Godlike Skill] Whis' Dokkan Awakened form.,6200,4150,,,6200.0,4150.0,0,STR,super,,6200.0,4150.0,6200.0,4150.0,0
+Unstoppable Power,Vegito,Series 5,160,silver,Super AGL,[Overwhelming Combat Strength] Vegito's Dokkan Awakened form.,6350,4250,,2022-02-08,6350.0,4250.0,0,AGL,super,,6350.0,4250.0,6350.0,4250.0,0
+Radiant Potential,Caulifla,Series 8,278,silver,Super TEQ,[Interest in New Power] Caulifla's Dokkan Awakened form.,5850,3900,,,5850.0,3900.0,0,TEQ,super,,5850.0,3900.0,5850.0,3900.0,0
+Impressive Progress,Kale,Series 8,279,silver,Super STR,[Newly Discovered Talent] Kale's Dokkan Awakened form.,5700,3800,,,5700.0,3800.0,0,STR,super,,5700.0,3800.0,5700.0,3800.0,0
+Sign of a Turnaround,Goku (Ultra Instinct -Sign-),Series 8,259,platinum,Super STR,[Extreme Fight Super Saiyan] God SS Goku's Dokkan Awakened form.,11400,11400,,,11400.0,11400.0,1,STR,super,,11400.0,11400.0,11400.0,11400.0,1
+Passing the Mantle,Goku (Angel),Series 4,122,silver,Super PHY,[Little Time Remaining] Goku (Angel)'s Dokkan Awakened form.,3800,5700,,2021-12-15,3800.0,5700.0,0,PHY,super,,3800.0,5700.0,3800.0,5700.0,0
+Ultimate Power-Up,Ultimate Gohan,Series 5,161,silver,INT,[Training at the Sanctuary] Gohan (Teen)'s Dokkan Awakened form.,6200,4150,,2022-02-08,6200.0,4150.0,0,INT,,,6200.0,4150.0,6200.0,4150.0,0
+From Father to Son,Goten (Kid),Series 5,174,bronze,STR,[Final Wish] Goten (Kid)'s Dokkan Awakened form.,3750,2500,,2022-02-08,3750.0,2500.0,0,STR,,,3750.0,2500.0,3750.0,2500.0,0
+Trustworthy Skill and Experience,Krillin,Series 8,273,silver,Super AGL,[A Veteran's Ingenuity and Perseverance] Krillin's Dokkan Awakened form.,5600,3750,,,5600.0,3750.0,0,AGL,super,,5600.0,3750.0,5600.0,3750.0,0
+Risky Covering Fire,Tien,Series 5,163,silver,Super PHY,[Support In the Nick of Time] Tien's Dokkan Awakened form.,5400,3600,,2022-02-08,5400.0,3600.0,0,PHY,super,,5400.0,3600.0,5400.0,3600.0,0
+Invincible Absorption,Majin Buu (Gotenks),Series 5,157,gold,Extreme PHY,[Triumphant Majin] Majin Buu (Gotenks)'s Dokkan Awakened form.,8900,7400,,2022-02-08,8900.0,7400.0,1,PHY,extreme,,8900.0,7400.0,8900.0,7400.0,1
+Invincible Absorption,Majin Buu (Ultimate Gohan),Series 5,150,platinum,Extreme PHY,[Invincible Absorption] Majin Buu (Gotenks)'s form after Absorption.,11150,11150,,2022-02-08,11150.0,11150.0,1,PHY,extreme,,11150.0,11150.0,11150.0,11150.0,1
+First Step as a Warrior,Super Saiyan 2 Kale,Series 8,267,gold,Super INT,[Well-Honed Body and Mind] Super Saiyan 2 Kale's Dokkan Awakened form.,8500,7100,,,8500.0,7100.0,1,INT,super,,8500.0,7100.0,8500.0,7100.0,1
+Fused Hope,Goku & Vegeta (Angel),Series 5,151,gold,Super STR,[Crossing Convictions] Goku & Vegeta (Angel)'s Dokkan Awakened form.,8650,7200,,2022-02-08,8650.0,7200.0,1,STR,super,,8650.0,7200.0,8650.0,7200.0,1
+Fused Hope,Super Vegito,Series 5,149,platinum,Super STR,[Fused Hope] Goku & Vegeta (Angel)'s form after Special Fusion.,11250,11250,,2022-02-08,11250.0,11250.0,1,STR,super,,11250.0,11250.0,11250.0,11250.0,1
+Concentrated Cells,Majin Buu (Piccolo),Series 5,179,bronze,AGL,Can be recruited from Summons.,4200,2800,,2022-02-08,4200.0,2800.0,0,AGL,,,4200.0,2800.0,4200.0,2800.0,0
+Power Taken From Others,Majin Buu (Piccolo),Series 5,156,gold,Extreme AGL,[Concentrated Cells] Majin Buu (Piccolo)'s Dokkan Awakened form.,8600,7150,,2022-02-08,8600.0,7150.0,1,AGL,extreme,,8600.0,7150.0,8600.0,7150.0,1
+Revival for the Entire Universe,Goku,Series 5,173,bronze,INT,"Can be recruited from the Story Event ""Showdown! The Ultimate Final Battle"".",3900,2600,,2022-02-08,3900.0,2600.0,0,INT,,,3900.0,2600.0,3900.0,2600.0,0
+Shadow of Aggression,Turles,Series 7,231,gold,Extreme STR,Can be recruited from Legendary Summons.,',6900,,,8650.0,6900.0,1,STR,extreme,,,6900.0,8650.0,6900.0,1
+The Surviving Savior,Hercule,Series 5,175,bronze,AGL,"Can be recruited from the Story Event ""Showdown! The Ultimate Final Battle"".",3000,2000,,2022-02-08,3000.0,2000.0,0,AGL,,,3000.0,2000.0,3000.0,2000.0,0
+Worldwide Terror,Babidi & Majin Buu (Good),Series 4,113,platinum,Extreme PHY,[Unusual Villains] Babidi & Majin Buu (Good)'s Dokkan Awakened form.,11050,11050,,2021-12-15,11050.0,11050.0,1,PHY,extreme,,11050.0,11050.0,11050.0,11050.0,1
+Battle with New Enemies,Super Saiyan Gohan (Youth),Series 5,154,gold,Super TEQ,Can be recruited from Legendary Summons.,8700,7250,,2022-02-08,8700.0,7250.0,1,TEQ,super,,8700.0,7250.0,8700.0,7250.0,1
+Leader of Team Universe 7,Ultimate Gohan,Series 8,270,silver,Super TEQ,Can be recruited from Summons.,6200,4150,,,6200.0,4150.0,0,TEQ,super,,6200.0,4150.0,6200.0,4150.0,0
+Plot to Trick the Gods,Golden Frieza (Angel),Series 8,269,silver,Extreme STR,Can be recruited from Summons.,6300,4200,,,6300.0,4200.0,0,STR,extreme,,6300.0,4200.0,6300.0,4200.0,0
+Wise Warrior,Piccolo,Series 8,274,silver,Super TEQ,"Can be recruited from the Story Event ""The Power of Trust! The Miracle of Universe 7"".",5700,3800,,,5700.0,3800.0,0,TEQ,super,,5700.0,3800.0,5700.0,3800.0,0
+Experience-Leveraging Role,Master Roshi,Series 8,272,silver,Super PHY,"[The Older, The Wiser] Master Roshi's Dokkan Awakened form.",5900,3950,,,5900.0,3950.0,0,PHY,super,,5900.0,3950.0,5900.0,3950.0,0
+New Instinct of the Awakened One,Goku (Ultra Instinct -Sign-),Series 8,261,gold,Super PHY,[New Form on the Horizon] Goku (Ultra Instinct -Sign-)'s Dokkan Awakened form.,8950,7450,,,8950.0,7450.0,1,PHY,super,,8950.0,7450.0,8950.0,7450.0,1
+Mightiest of Monarchs,King Cold,Series 2,74,bronze,PHY,"Can be recruited from the Strike Event ""Cold-Blooded King"".",3200,2150,2021-05-03,2021-07-26,3200.0,2150.0,0,PHY,,84.0,3200.0,2150.0,3200.0,2150.0,0
+Final Will to Fight,Super Saiyan Gohan (Future),Series 6,214,bronze,TEQ,Can be recruited from Summons.,3800,2550,,,3800.0,2550.0,0,TEQ,,,3800.0,2550.0,3800.0,2550.0,0
+Rampage of Destruction,Android #18,Series 6,221,bronze,AGL,Can be recruited from Summons.,3900,2600,,,3900.0,2600.0,0,AGL,,,3900.0,2600.0,3900.0,2600.0,0
+Vicious Power Fighter,Bido,Series 5,185,bronze,PHY,Can be recruited from Summons.,3600,2400,,2022-02-08,3600.0,2400.0,0,PHY,,,3600.0,2400.0,3600.0,2400.0,0
+Merciless Supernatural Power,Bujin,Series 5,184,bronze,INT,Can be recruited from Summons.,3500,2350,,2022-02-08,3500.0,2350.0,0,INT,,,3500.0,2350.0,3500.0,2350.0,0

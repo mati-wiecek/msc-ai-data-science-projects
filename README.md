@@ -11,6 +11,7 @@ This repository is structured as a recruiter-friendly technical portfolio. Each 
 | [CS801 Quantitative Methods in AI](cs801-quantitative-methods-ai/) | Statistics, ML evaluation, Kaggle critique | Comparative analysis of three machine learning workflows using formal tests, validation metrics, reproducible notebooks, and a methodology report. |
 | [Project RAG for NHS-style Clinical Knowledge Retrieval](project-rag-nhs/) | Generative AI, RAG, LLM systems | Architecture write-up prepared; code and non-sensitive examples to be added. |
 | [Sign Language MNIST - Neural Networks from Scratch](sign-language-mnist/) | Computer Vision, Deep Learning, NumPy | From-scratch perceptron and fully connected neural network analysis with executed notebooks, metrics, learning curves, and label-diagnostic discussion. |
+| [CS982 Pettan Battle Card Analysis](cs982-dragon-ball-pettan-big-data/) | Big Data Technologies, Clustering, Classification | Reproducible structured-data workflow with feature engineering, Mann-Whitney tests, K-Means segmentation, and leakage-aware supervised modelling. |
 | [Genetic Algorithms for Portfolio Optimisation](genetic-algorithms-portfolio-optimisation/) | Optimisation, Evolutionary Algorithms | README and project structure prepared; implementation and results to be added. |
 
 ## Portfolio Goals

@@ -1,0 +1,62 @@
+{
+  "dataset": {
+    "rows": 295,
+    "columns": 22,
+    "target": "is_high",
+    "positive_class_definition": "gold or platinum rarity"
+  },
+  "descriptive_statistics": {
+    "hp_mean": 5712.20,
+    "hp_median": 5700.0,
+    "hp_std": 2352.41,
+    "attack_mean": 4640.17,
+    "attack_median": 3900.0,
+    "attack_std": 2444.48
+  },
+  "rarity_counts": {
+    "bronze": 119,
+    "silver": 97,
+    "gold": 63,
+    "platinum": 16
+  },
+  "mann_whitney": {
+    "hp_for_model": {
+      "median_high": 8700.0,
+      "median_low": 4100.0,
+      "median_difference": 4600.0,
+      "p_value": 1.5596987440784452e-39
+    },
+    "attack_for_model": {
+      "median_high": 7350.0,
+      "median_low": 3200.0,
+      "median_difference": 4150.0,
+      "p_value": 1.6276098224944562e-39
+    }
+  },
+  "clustering": {
+    "selected_k": 5,
+    "selection_metric": "silhouette score",
+    "features": ["hp_for_model", "attack_for_model"]
+  },
+  "supervised_model": {
+    "model": "LogisticRegression(class_weight='balanced')",
+    "features": ["hp_for_model", "attack_for_model"],
+    "cross_validation": {
+      "folds": 5,
+      "accuracy_mean": 1.0,
+      "precision_mean": 1.0,
+      "recall_mean": 1.0,
+      "f1_mean": 1.0,
+      "roc_auc_mean": 1.0
+    },
+    "holdout": {
+      "test_size": 0.30,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [[65, 0], [0, 24]]
+    }
+  }
+}
