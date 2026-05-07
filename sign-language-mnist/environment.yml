@@ -1,0 +1,11 @@
+name: cs802-sign-language
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - matplotlib
+  - jupyterlab
+  - ipykernel
+  - nbformat

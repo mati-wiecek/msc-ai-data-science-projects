@@ -1,0 +1,41 @@
+{
+  "dataset": {
+    "train_samples": 27455,
+    "test_samples": 7172,
+    "features": 784
+  },
+  "perceptron": {
+    "binary_best": {
+      "configuration": "step activation + online learning",
+      "accuracy": 0.993028,
+      "precision": 0.967626,
+      "recall": 0.867742
+    },
+    "multiclass_best": {
+      "configuration": "sigmoid activation + online one-vs-rest",
+      "accuracy": 0.378137,
+      "macro_precision": 0.318149,
+      "macro_recall": 0.305569
+    }
+  },
+  "neural_network": {
+    "binary_best": {
+      "configuration": "ReLU, hidden layer [128], momentum 0.9",
+      "accuracy": 0.998606,
+      "precision": 1.0,
+      "recall": 0.967742
+    },
+    "multiclass_raw_labels": {
+      "configuration": "ReLU, hidden layers [512, 256]",
+      "accuracy": 0.45844952593418853,
+      "macro_precision": 0.397588258291381,
+      "macro_recall": 0.3823354062558602
+    },
+    "multiclass_aligned_label_diagnostic": {
+      "configuration": "ReLU, hidden layers [512, 256]",
+      "accuracy": 0.8862242052426101,
+      "macro_precision": 0.8692629003379405,
+      "macro_recall": 0.8524027433969489
+    }
+  }
+}
