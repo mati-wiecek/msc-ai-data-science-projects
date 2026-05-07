@@ -1,0 +1,16 @@
+.Rhistory
+.RData
+.Rproj.user/
+*.html
+*.pdf
+*.log
+*.aux
+*.out
+*.toc
+
+# Local/private files
+private/
+*submission*
+*review*
+*.docx
+*.xlsx

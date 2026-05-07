@@ -1,0 +1,16 @@
+"parameter","value"
+"macd_fast",15
+"macd_slow",45
+"macd_signal",10
+"rsi_n",14
+"adx_n",18
+"atr_n",22
+"sma_n",124
+"adx_regime",10.5905005484819
+"rsi_buy",21.4137752503157
+"rsi_sell",68.3788173347712
+"rsi_exit",52.1744345128536
+"stop_atr",1.49548956751823
+"trail_atr",3.95223733782768
+"max_hold",22
+"risk_frac",0.0241037756204605

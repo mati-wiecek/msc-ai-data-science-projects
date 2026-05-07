@@ -1,0 +1,2 @@
+"symbol","start","end","observations","train_observations","test_observations","first_adjusted_close","last_adjusted_close","mean_daily_log_return","sd_daily_log_return","annualised_volatility","min_daily_log_return","max_daily_log_return","median_volume"
+"GOOG","2015-01-02","2024-12-30",2515,1763,752,25.9555587768555,191.807632446289,0.000795271235669072,0.0179170521480891,0.284424385267316,-0.117667360436249,0.148871919861065,27024000
