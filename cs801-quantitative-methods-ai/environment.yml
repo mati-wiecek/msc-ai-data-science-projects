@@ -1,4 +1,4 @@
-name: cs801-portfolio
+name: cs801-methods
 channels:
   - conda-forge
 dependencies:

@@ -1,45 +1,45 @@
-# CS801 Quantitative Methods in AI - Kaggle Notebook Critique Portfolio
+# CS801 Quantitative Methods in AI - Comparative ML Workflow Analysis
 
-Portfolio project based on the CS801 Quantitative Methods in AI assignment. The repository contains three improved, annotated notebooks that critique and strengthen the original Kaggle workflows:
+This project analyses three public Kaggle-style machine learning workflows through the lens of quantitative methods, statistical validity and reproducible evaluation. The repository contains annotated notebooks covering:
 
 1. **Customer Segmentation - Clustering**
 2. **IEEE-CIS Fraud Detection - Exploratory Data Analysis**
 3. **Disaster Tweets - TF-IDF and classification**
 
-The project is structured to be readable as a portfolio: clear objectives, reproducible setup, explicit data instructions, quantitative tests, model-validation metrics, and a feedback-to-improvement report.
+The project is structured as a reproducible research artefact: each notebook defines an objective, motivates the methodological choices, applies appropriate statistical tests or validation metrics, and documents the assumptions required to run the analysis locally.
 
-## What was improved from the marked version
+## Research Questions and Methods
 
-| Area from feedback | Previous weakness | GitHub-ready improvement |
+| Case study | Research question | Quantitative methods |
 |---|---|---|
-| Part 1 - Customer Segmentation | Listwise deletion and arbitrary outlier caps lacked statistical justification | Added missingness audit, median imputation with missing indicators, IQR-based winsorisation, outlier flags, one-hot encoding, PCA explained variance, cluster-validation metrics, and formal cluster-profile tests |
-| Part 2 - Fraud Detection | Analysis remained descriptive; no formal statistical tests | Added Mann-Whitney tests, chi-square tests, effect sizes, Benjamini-Hochberg correction, V-feature PCA, time-aware validation split, and imbalance-aware fraud metrics |
-| Part 3 - Disaster Tweets | Heavy reliance on accuracy despite class imbalance | Added stratified cross-validation, F1/precision/recall/ROC-AUC/PR-AUC, threshold tuning, paired fold-score comparison, and false-positive/false-negative error analysis |
-| Submission format | Notebook files were penalised as missing | Repository includes all three `.ipynb` files directly under `notebooks/` |
+| Customer Segmentation | Can customer groups be identified in a way that is statistically defensible and interpretable? | Missingness audit, median imputation with missing indicators, IQR-based winsorisation, one-hot encoding, PCA explained variance, cluster-validation metrics, Kruskal-Wallis tests and chi-square tests for cluster profiles. |
+| IEEE-CIS Fraud Detection | Which transaction and identity features show measurable association with fraud, and how should rare-event evaluation be framed? | Mann-Whitney tests, chi-square tests, effect sizes, Benjamini-Hochberg correction, V-feature PCA, time-aware validation split, PR-AUC, F1, recall and threshold analysis. |
+| Disaster Tweets | How should disaster-tweet classifiers be evaluated when class balance and false-negative cost matter? | Stratified cross-validation, precision, recall, F1, ROC-AUC, PR-AUC, threshold tuning, paired fold-score comparison and false-positive/false-negative error analysis. |
 
 ## Repository structure
 
 ```text
 cs801-quantitative-methods-ai/
-├── notebooks/
-│   ├── 01_customer_segmentation_improved.ipynb
-│   ├── 02_ieee_fraud_detection_improved.ipynb
-│   └── 03_disaster_tweets_improved.ipynb
-├── src/
-│   ├── __init__.py
-│   └── cs801_utils.py
-├── reports/
-│   ├── CS801_Quantitative_Methods_AI_Improved_Report.md
-│   └── feedback_to_improvement_matrix.md
-├── data/
-│   ├── README.md
-│   └── raw/
-├── outputs/
-├── figures/
-├── requirements.txt
-├── environment.yml
-├── .gitignore
-└── README.md
+|-- notebooks/
+|   |-- 01_customer_segmentation_analysis.ipynb
+|   |-- 02_ieee_fraud_detection_analysis.ipynb
+|   `-- 03_disaster_tweets_analysis.ipynb
+|-- src/
+|   |-- __init__.py
+|   `-- cs801_utils.py
+|-- reports/
+|   |-- CS801_Quantitative_Methods_AI_Methodology_Report.md
+|   |-- CS801_Quantitative_Methods_AI_Methodology_Report.pdf
+|   `-- methodology_revision_matrix.md
+|-- data/
+|   |-- README.md
+|   `-- raw/
+|-- outputs/
+|-- figures/
+|-- requirements.txt
+|-- environment.yml
+|-- .gitignore
+`-- README.md
 ```
 
 ## Data
@@ -72,7 +72,7 @@ source .venv/bin/activate
 
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-python -m ipykernel install --user --name cs801-portfolio --display-name "CS801 Portfolio"
+python -m ipykernel install --user --name cs801-methods --display-name "CS801 Methods"
 jupyter lab
 ```
 
@@ -82,7 +82,7 @@ jupyter lab
 git clone https://github.com/mati-wiecek/msc-ai-data-science-projects.git
 cd msc-ai-data-science-projects/cs801-quantitative-methods-ai
 conda env create -f environment.yml
-conda activate cs801-portfolio
+conda activate cs801-methods
 jupyter lab
 ```
 
@@ -90,15 +90,15 @@ Open the notebooks in order from the `notebooks/` folder.
 
 ## Recommended execution order
 
-1. `notebooks/01_customer_segmentation_improved.ipynb`
-2. `notebooks/02_ieee_fraud_detection_improved.ipynb`
-3. `notebooks/03_disaster_tweets_improved.ipynb`
+1. `notebooks/01_customer_segmentation_analysis.ipynb`
+2. `notebooks/02_ieee_fraud_detection_analysis.ipynb`
+3. `notebooks/03_disaster_tweets_analysis.ipynb`
 
 Each notebook starts with a data-loading cell. If a file is missing, the notebook raises a clear message explaining which file to place in `data/raw/`.
 
-## Portfolio highlights
+## Methodological Highlights
 
-This version is designed to demonstrate quantitative-methods understanding, not only Python execution. It includes:
+The project emphasises quantitative reasoning rather than notebook execution alone. It includes:
 
 - missingness diagnostics and imputation reasoning;
 - IQR-based outlier treatment instead of arbitrary caps;
@@ -111,9 +111,9 @@ This version is designed to demonstrate quantitative-methods understanding, not 
 - precision-recall analysis and PR-AUC for imbalanced classification;
 - threshold tuning and error analysis for disaster-tweet classification.
 
-## Public repository checks
+## Version Control and Data Policy
 
-This project is published inside the `msc-ai-data-science-projects` portfolio repository. Raw Kaggle data, marked feedback screenshots and original assignment PDFs are intentionally excluded.
+Raw Kaggle data, local outputs and private course materials are intentionally excluded.
 
 Before adding future changes, check:
 
@@ -123,18 +123,6 @@ git ls-files cs801-quantitative-methods-ai/data/raw
 ```
 
 `git ls-files cs801-quantitative-methods-ai/data/raw` should show only `.gitkeep`, not raw datasets. The project `.gitignore` is configured to protect data, outputs, caches and local environments within this folder.
-
-## Suggested GitHub repository description
-
-```text
-Improved CS801 Quantitative Methods in AI portfolio: critique and enhancement of three Kaggle notebooks using statistical tests, validation metrics and reproducible ML workflows.
-```
-
-## Suggested topics
-
-```text
-data-science, machine-learning, quantitative-methods, kaggle, clustering, fraud-detection, nlp, tfidf, statistics, portfolio
-```
 
 ## Data and reproducibility note
 

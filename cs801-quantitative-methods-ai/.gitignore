@@ -35,9 +35,10 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Do not publish graded/private materials
-*feedback*.png
-*feedback*.jpg
-*grade*.png
-assignment.pdf
-*Assignment*.pdf
+# Do not publish private/local materials
+*_private.png
+*_private.jpg
+*_local.png
+*_local.jpg
+*.pdf
+!reports/CS801_Quantitative_Methods_AI_Methodology_Report.pdf

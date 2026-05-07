@@ -30,7 +30,7 @@ data/raw/fraud_test_transaction.csv
 data/raw/fraud_test_identity.csv
 ```
 
-The improved notebook uses test files only for optional unlabeled covariate-shift diagnostics. It does not use test labels or test data for supervised model selection.
+The notebook uses test files only for optional unlabeled covariate-shift diagnostics. It does not use test labels or test data for supervised model selection.
 
 ### Part 3 - Disaster Tweets
 

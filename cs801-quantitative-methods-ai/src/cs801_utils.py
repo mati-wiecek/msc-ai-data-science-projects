@@ -21,7 +21,7 @@ from sklearn.metrics import (
 
 
 def safe_read_csv(path: str | Path, **kwargs) -> pd.DataFrame:
-    """Read a CSV with a clear error message for GitHub users who have not added data yet."""
+    """Read a CSV with a clear error message when local data files are missing."""
     path = Path(path)
     if not path.exists():
         raise FileNotFoundError(
