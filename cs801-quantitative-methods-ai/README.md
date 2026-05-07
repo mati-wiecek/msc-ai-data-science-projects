@@ -1,6 +1,6 @@
 # CS801 Quantitative Methods in AI - Kaggle Notebook Critique Portfolio
 
-GitHub-ready portfolio project based on the CS801 Quantitative Methods in AI assignment. The repository contains three improved, annotated notebooks that critique and strengthen the original Kaggle workflows:
+Portfolio project based on the CS801 Quantitative Methods in AI assignment. The repository contains three improved, annotated notebooks that critique and strengthen the original Kaggle workflows:
 
 1. **Customer Segmentation - Clustering**
 2. **IEEE-CIS Fraud Detection - Exploratory Data Analysis**
