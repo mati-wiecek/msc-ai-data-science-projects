@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data and generated artifacts
+data/raw/*
+!data/raw/.gitkeep
+outputs/*
+!outputs/.gitkeep
+figures/*
+!figures/.gitkeep
+*.csv
+*.zip
+*.parquet
+*.pkl
+*.joblib
+
+# Local/OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Do not publish graded/private materials
+*feedback*.png
+*feedback*.jpg
+*grade*.png
+assignment.pdf
+*Assignment*.pdf

@@ -8,6 +8,7 @@ This repository is structured as a recruiter-friendly technical portfolio. Each 
 
 | Project | Area | Status |
 | --- | --- | --- |
+| [CS801 Quantitative Methods in AI Portfolio](cs801-quantitative-methods-ai/) | Statistics, ML evaluation, Kaggle critique | GitHub-ready improved assignment with three annotated notebooks, reproducibility setup, formal tests, validation metrics, and report. |
 | [Project RAG for NHS-style Clinical Knowledge Retrieval](project-rag-nhs/) | Generative AI, RAG, LLM systems | Architecture write-up prepared; code and non-sensitive examples to be added. |
 | [Sign Language MNIST Classification](sign-language-mnist/) | Computer Vision, Deep Learning | README and reproducibility structure prepared; notebooks, curves, and model code to be added. |
 | [Genetic Algorithms for Portfolio Optimisation](genetic-algorithms-portfolio-optimisation/) | Optimisation, Evolutionary Algorithms | README and project structure prepared; implementation and results to be added. |
@@ -18,6 +19,7 @@ This repository is structured as a recruiter-friendly technical portfolio. Each 
 - Present projects in a format that is easy for recruiters and technical reviewers to scan.
 - Keep experiments reproducible with clear setup instructions and requirements files.
 - Separate public methodology from private or sensitive data where needed.
+- Show how marked feedback can be converted into stronger quantitative methods and evaluation practice.
 
 ## Core Stack
 
