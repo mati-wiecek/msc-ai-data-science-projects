@@ -995,15 +995,22 @@ dev.off()
 
 # Figure 4: Random-search training fitness distribution versus the GA optimum.
 png("figures/04_random_search_train_fitness.png", width = 1200, height = 700)
-hist(random_results$train_fitness,
+ga_best_fitness <- best_eval$train$metrics$fitness[1]
+finite_random_fitness <- random_results$train_fitness[is.finite(random_results$train_fitness)]
+fitness_limits <- range(c(finite_random_fitness, ga_best_fitness), na.rm = TRUE)
+fitness_padding <- diff(fitness_limits) * 0.08
+hist(finite_random_fitness,
      breaks = 30,
+     xlim = c(fitness_limits[1] - fitness_padding, fitness_limits[2] + fitness_padding),
      main = "Random-search training fitness distribution",
      xlab = "Training fitness",
+     col = "grey85",
      border = "white")
-abline(v = best_eval$train$metrics$fitness[1], lwd = 3, lty = 2)
+abline(v = ga_best_fitness, col = "red3", lwd = 4, lty = 2)
+text(ga_best_fitness, par("usr")[4] * 0.92, "GA optimum", col = "red3", pos = 4, xpd = TRUE)
 legend("topright",
-       legend = c("GA best fitness"),
-       lty = 2, lwd = 3, bty = "n")
+       legend = c("GA optimum"),
+       col = "red3", lty = 2, lwd = 4, bty = "n")
 dev.off()
 
 

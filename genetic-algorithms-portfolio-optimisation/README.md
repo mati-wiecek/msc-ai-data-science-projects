@@ -25,6 +25,8 @@ The central research question is whether evolutionary search can produce a defen
 - Costs: flat commission plus slippage
 - Risk management: ATR stop, ATR trailing stop, maximum holding period and capped risk fraction
 
+The train/test split is interpreted as a demanding validation setting: the training sample ends close to a local GOOG peak before the 2022 drawdown. This makes the test period useful for evaluating whether the strategy can reduce exposure during a weaker regime, but it also limits claims about general market-wide robustness.
+
 ## Results Summary
 
 | Test-period strategy | Net profit | Total return | Sharpe | Max drawdown | Trades |
@@ -36,6 +38,8 @@ The central research question is whether evolutionary search can produce a defen
 | Mean random solution | GBP 108.89 | n/a | 0.03 | n/a | n/a |
 
 The GA strategy remains profitable out of sample and clearly improves on the fixed baseline and the mean random solution. It does not dominate buy-and-hold on raw return, and the best random draw remains competitive. The strongest defensible claim is therefore narrower and more useful: the GA produced a lower-drawdown active timing rule with positive out-of-sample performance, but not a universally superior trading strategy.
+
+Only GA is used as the main optimiser in this version. Random search is included as a benchmark, but a fuller optimisation study would also compare against particle swarm optimisation, differential evolution or Bayesian optimisation.
 
 ## Repository Structure
 

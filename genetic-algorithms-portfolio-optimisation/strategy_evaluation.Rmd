@@ -91,6 +91,8 @@ The data choice also places a boundary on the strength of any conclusion. Becaus
 
 One methodological nuance matters for interpretation. The **test-period comparison is the cleanest comparison in the report**, because all strategies are evaluated on the same reserved calendar window from 2022 onward. The in-sample comparison is still useful, but it is slightly less decisive because different indicator lookbacks create different warm-up losses at the start of the training sample. That does not invalidate the analysis, but it means the out-of-sample section should carry more weight than the training section when final judgements are made.
 
+The split date also creates a demanding test design. The training sample ends close to a local high in GOOG before a large 2022 drawdown, so the reserved test period begins in a much less favourable market regime than much of the training window. This is useful because it tests whether the long/cash timing rule can reduce exposure during a difficult regime, but it also means that the active strategy is partly being judged against a structural market break rather than a smooth continuation of the training distribution.
+
 ### Key code: data import and chronological split
 
 ```{r code-data-import, echo=TRUE, eval=FALSE}
@@ -177,6 +179,8 @@ The GA chromosome optimises 15 variables:
 15. Fraction of equity risked per trade
 
 This is materially more sophisticated than a textbook single-indicator strategy because it optimises not only signal thresholds, but also regime definition, trade management and risk allocation. The GA search itself is also intentionally conservative in this final version: the search budget is large enough to explore the space meaningfully, but not so aggressive that it obviously encourages a train-period champion at the expense of out-of-sample behaviour. That moderation is important because, in finance, the best-looking in-sample solution is often not the most believable one.
+
+The optimisation design is deliberately centred on a genetic algorithm. Random search is included as a benchmark for unguided exploration, but other population-based or sequential optimisers such as particle swarm optimisation, differential evolution or Bayesian optimisation are not evaluated here. This limits the strength of any claim about GA superiority; the project can assess whether this GA implementation is useful for the chosen trading architecture, not whether GA is the best possible optimiser for the problem.
 
 ### Key code: parameter repair and indicator construction
 
@@ -478,6 +482,8 @@ The benchmark evidence is mixed but informative. On the test set, the GA beats t
 
 The GA also does **not** beat buy and hold on test-period profit. The active strategy underperforms passive exposure by **`r fmt_gbp(abs(ga_vs_buyhold_test_profit))`**. Its compensating strength is drawdown control: the GA's maximum drawdown is **`r fmt_pct(results$best_eval$test$metrics$max_dd_pct)`**, versus **`r fmt_pct(results$buyhold_test$metrics$max_dd_pct)`** for buy and hold, a reduction of about **`r fmt_pct(abs(ga_vs_buyhold_test_dd))`**. This is the fairest interpretation of the result: the strategy is better defended as a lower-drawdown active rule than as the outright best-return strategy.
 
+This drawdown result is especially relevant because the test window begins after a local peak and includes the subsequent 2022 weakness in GOOG. The active strategy's lower drawdown therefore has a clear economic interpretation: it gives up part of the upside captured by passive exposure, but it also avoids a large part of the test-period equity decline.
+
 That distinction matters for research interpretation. A strong comparison section should not simply celebrate the optimised model; it should explain exactly where the optimisation helped, where it did not, and what claim remains economically defensible after all the benchmarks are considered.
 
 ### Key code: random-search benchmark and comparison table
@@ -520,7 +526,7 @@ The evidence is not perfect, though. The revised long/cash GA improves the out-o
 
 That is the kind of claim a disciplined empirical finance report should make: ambitious enough to show what the system achieves, but disciplined enough not to overstate what a single-asset, single-split experiment can prove.
 
-If this were extended beyond the current prototype, the next methodological upgrades should be a common-start alignment for every in-sample benchmark, rolling-window or walk-forward validation, and a richer cost model including borrow frictions for any future short-capable version. Stating those next steps explicitly is part of a strong critical evaluation because it shows where the current evidence genuinely ends.
+If this were extended beyond the current prototype, the next methodological upgrades should be a common-start alignment for every in-sample benchmark, rolling-window or walk-forward validation, alternative optimisers such as particle swarm optimisation or differential evolution, and a richer cost model including borrow frictions for any future short-capable version. Stating those next steps explicitly is part of a strong critical evaluation because it shows where the current evidence genuinely ends.
 
 ## References
 
@@ -1530,15 +1536,22 @@ dev.off()
 
 # Figure 4: Random-search training fitness distribution versus the GA optimum.
 png("figures/04_random_search_train_fitness.png", width = 1200, height = 700)
-hist(random_results$train_fitness,
+ga_best_fitness <- best_eval$train$metrics$fitness[1]
+finite_random_fitness <- random_results$train_fitness[is.finite(random_results$train_fitness)]
+fitness_limits <- range(c(finite_random_fitness, ga_best_fitness), na.rm = TRUE)
+fitness_padding <- diff(fitness_limits) * 0.08
+hist(finite_random_fitness,
      breaks = 30,
+     xlim = c(fitness_limits[1] - fitness_padding, fitness_limits[2] + fitness_padding),
      main = "Random-search training fitness distribution",
      xlab = "Training fitness",
+     col = "grey85",
      border = "white")
-abline(v = best_eval$train$metrics$fitness[1], lwd = 3, lty = 2)
+abline(v = ga_best_fitness, col = "red3", lwd = 4, lty = 2)
+text(ga_best_fitness, par("usr")[4] * 0.92, "GA optimum", col = "red3", pos = 4, xpd = TRUE)
 legend("topright",
-       legend = c("GA best fitness"),
-       lty = 2, lwd = 3, bty = "n")
+       legend = c("GA optimum"),
+       col = "red3", lty = 2, lwd = 4, bty = "n")
 dev.off()
 
 
