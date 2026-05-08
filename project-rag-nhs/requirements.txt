@@ -1,5 +1,2 @@
-numpy
-pandas
-scikit-learn
-jupyter
-matplotlib
+scikit-learn>=1.4,<2.0
+PyYAML>=6.0,<7.0

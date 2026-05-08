@@ -9,7 +9,7 @@ This repository is structured as a recruiter-friendly technical portfolio. Each 
 | Project | Area | Status |
 | --- | --- | --- |
 | [CS801 Quantitative Methods in AI](cs801-quantitative-methods-ai/) | Statistics, ML evaluation, Kaggle critique | Comparative analysis of three machine learning workflows using formal tests, validation metrics, reproducible notebooks, and a methodology report. |
-| [Project RAG for NHS-style Clinical Knowledge Retrieval](project-rag-nhs/) | Generative AI, RAG, LLM systems | Architecture write-up prepared; code and non-sensitive examples to be added. |
+| [Clinically Aware RAG for NHS-style EHR](project-rag-nhs/) | Generative AI, RAG, Clinical NLP | Runnable synthetic-data RAG prototype with patient-aware retrieval, safety checks, cited answers, evaluation qrels, tests and governance documentation. |
 | [Sign Language MNIST - Neural Networks from Scratch](sign-language-mnist/) | Computer Vision, Deep Learning, NumPy | From-scratch perceptron and fully connected neural network analysis with executed notebooks, metrics, learning curves, and label-diagnostic discussion. |
 | [CS982 Pettan Battle Card Analysis](cs982-dragon-ball-pettan-big-data/) | Big Data Technologies, Clustering, Classification | Reproducible structured-data workflow with feature engineering, Mann-Whitney tests, K-Means segmentation, and leakage-aware supervised modelling. |
 | [Evolutionary Optimisation of a Trading Strategy](genetic-algorithms-portfolio-optimisation/) | Evolutionary Computation, AI for Finance | Genetic-algorithm optimisation of a long/cash MACD/RSI/ADX trading strategy with chronological validation, benchmarks, cached results, figures and full R implementation. |

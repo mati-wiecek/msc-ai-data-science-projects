@@ -1,0 +1,28 @@
+{
+  "queries": [
+    {
+      "query_id": "Q1",
+      "patient_id": "SYN-001",
+      "question": "What medications is patient SYN-001 taking?",
+      "relevant_doc_ids": ["SYN-001-meds"]
+    },
+    {
+      "query_id": "Q2",
+      "patient_id": "SYN-001",
+      "question": "Does the record mention allergies for SYN-001?",
+      "relevant_doc_ids": ["SYN-001-allergy"]
+    },
+    {
+      "query_id": "Q3",
+      "patient_id": "SYN-003",
+      "question": "What does the synthetic record say about anticoagulation for SYN-003?",
+      "relevant_doc_ids": ["SYN-003-meds", "SYN-003-labs"]
+    },
+    {
+      "query_id": "Q4",
+      "patient_id": "SYN-004",
+      "question": "Why was ACE inhibitor therapy withheld for SYN-004?",
+      "relevant_doc_ids": ["SYN-004-meds", "SYN-004-labs", "SYN-004-problems"]
+    }
+  ]
+}

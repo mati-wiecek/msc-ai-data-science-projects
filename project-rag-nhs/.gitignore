@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data governance: never commit real/raw clinical data
+/data/raw/*
+!/data/raw/.gitkeep
+/data/private/
+/data/nhs/
+/data/mimic/
+*.sqlite
+*.db
+*.parquet
+*.feather
+
+# Model/vector artefacts
+/models/
+/vector_store/
+/outputs/
+/reports/generated/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

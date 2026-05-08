@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clinically-aware-rag-nhs-ehr"
+version = "0.1.0"
+description = "Research scaffold for clinically-aware RAG over synthetic EHR records."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Project maintainer" }]
+dependencies = [
+    "scikit-learn>=1.4,<2.0",
+    "PyYAML>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9.0",
+    "ruff>=0.6,<1.0",
+]
+
+[project.scripts]
+clinrag = "clinrag.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

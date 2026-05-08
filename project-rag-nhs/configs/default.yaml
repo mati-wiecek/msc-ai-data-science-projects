@@ -1,0 +1,24 @@
+project:
+  name: clinically-aware-rag-nhs-ehr
+  mode: research-prototype
+  clinical_use: false
+
+data:
+  synthetic_docs_path: data/synthetic/synthetic_ehr_docs.jsonl
+  qrels_path: data/synthetic/synthetic_qrels.json
+  allow_real_patient_data: false
+
+retrieval:
+  strategy: tfidf
+  top_k: 3
+  min_score: 0.05
+
+generation:
+  require_citations: true
+  abstain_when_insufficient_evidence: true
+  max_evidence_items: 4
+
+safety:
+  block_direct_treatment_advice: true
+  flag_phi_patterns: true
+  require_uncertainty_statement: true

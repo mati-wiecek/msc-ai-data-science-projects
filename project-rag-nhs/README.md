@@ -1,64 +1,159 @@
-# Project RAG for NHS-style Clinical Knowledge Retrieval
+# Clinically Aware RAG for NHS-Style Electronic Health Records
 
-## Overview
+This project implements a research prototype for clinically aware Retrieval-Augmented Generation over synthetic Electronic Health Record (EHR) snippets. It focuses on grounded retrieval, patient-specific evidence filtering, citation-aware answer generation and explicit safety boundaries for unsupported or clinically unsafe questions.
 
-This project documents the architecture and methodology for a privacy-aware Retrieval-Augmented Generation system designed for clinical or healthcare-style knowledge retrieval.
+The current implementation uses synthetic records only. It is intended for research and portfolio demonstration, not for clinical use.
 
-The aim is to show how a large language model can be combined with a controlled document retrieval pipeline to answer domain-specific questions while keeping the source material traceable and separating public portfolio documentation from any sensitive data.
+> Safety boundary: this repository is not a medical device, not a clinical decision-support system and must not be used with real patient data unless appropriate ethics, information governance, security, legal basis, approvals and data access agreements are in place.
 
-## Problem
+## Research Aim
 
-Healthcare and clinical knowledge bases can be large, fragmented, and difficult to search manually. A RAG system can improve access to relevant information by retrieving supporting passages first, then using an LLM to generate a grounded answer.
+The aim is to investigate whether a RAG pipeline can answer EHR-grounded information needs more reliably when retrieval and generation are made clinically aware.
 
-The central challenge is to make the system useful while preserving trust, traceability, and data privacy.
+In this prototype, clinically aware means:
 
-## Proposed Approach
+1. patient-specific context is filtered before ranking;
+2. retrieved evidence is cited in the generated answer;
+3. unsupported answers are handled cautiously;
+4. unsafe or out-of-scope requests trigger a safety response;
+5. evaluation includes retrieval quality, citation coverage and safety behaviour.
 
-1. Ingest approved documents into a controlled document store.
-2. Clean and chunk the text into retrieval-friendly passages.
-3. Generate embeddings for each chunk.
-4. Store embeddings in a vector database.
-5. Retrieve the most relevant passages for a user query.
-6. Pass retrieved context to an LLM with a constrained prompt.
-7. Return an answer with references to the retrieved source material.
+## Research Questions
+
+- How can patient-specific filtering reduce wrong-record retrieval in EHR-style RAG?
+- Can a lightweight TF-IDF baseline support grounded answers over synthetic clinical snippets?
+- How should a clinical RAG prototype abstain when evidence is missing or a query requests diagnosis, prescribing or treatment instructions?
+- Which evaluation metrics best capture retrieval quality, faithfulness and safety behaviour?
+
+## Current Features
+
+- Runnable Python package with a `clinrag` command-line interface.
+- Synthetic FHIR-inspired EHR snippets and relevance labels.
+- TF-IDF retrieval baseline with patient-aware filtering.
+- Simple clinical safety layer for unsafe and out-of-scope requests.
+- Template-based grounded answer generation with source citations.
+- Retrieval evaluation using synthetic qrels.
+- Unit tests for retrieval, safety and pipeline behaviour.
+- Documentation covering methodology, data handling, ethics, evaluation and project risks.
+
+## Repository Structure
+
+```text
+project-rag-nhs/
+|-- configs/
+|   `-- default.yaml
+|-- data/
+|   |-- raw/
+|   |   `-- .gitkeep
+|   `-- synthetic/
+|       |-- synthetic_ehr_docs.jsonl
+|       `-- synthetic_qrels.json
+|-- docs/
+|   |-- DATA_HANDLING.md
+|   |-- ETHICS_AND_GOVERNANCE.md
+|   |-- EVALUATION_PLAN.md
+|   |-- METHODOLOGY.md
+|   |-- PROJECT_PLAN.md
+|   |-- REFERENCES.md
+|   `-- RISK_REGISTER.md
+|-- examples/
+|   `-- example_questions.yaml
+|-- src/
+|   `-- clinrag/
+|       |-- cli.py
+|       |-- clinical_safety.py
+|       |-- config.py
+|       |-- data_loader.py
+|       |-- data_models.py
+|       |-- evaluation.py
+|       |-- fhir_mapper.py
+|       |-- generator.py
+|       |-- preprocessing.py
+|       |-- rag_pipeline.py
+|       `-- retrieval.py
+|-- tests/
+|   |-- test_pipeline.py
+|   |-- test_retrieval.py
+|   `-- test_safety.py
+|-- .env.example
+|-- .gitignore
+|-- Makefile
+|-- pyproject.toml
+|-- requirements-dev.txt
+|-- requirements.txt
+`-- SECURITY.md
+```
+
+## Quick Start
+
+Create a virtual environment and install the package:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt -r requirements-dev.txt
+pip install -e .
+```
+
+Run the demo:
+
+```bash
+clinrag demo "What medications is patient SYN-001 taking?"
+clinrag query --patient-id SYN-001 --question "Does the record mention allergies?"
+clinrag evaluate
+pytest
+```
+
+Expected behaviour: the system retrieves relevant synthetic EHR snippets and produces a cautious answer with citations. If the question requests diagnosis, prescribing or direct treatment instructions, the safety layer constrains the response.
 
 ## Architecture
 
 ```text
-Documents -> Cleaning -> Chunking -> Embeddings -> Vector Store
-                                                   |
-User Query -> Query Embedding -> Similarity Search -> Retrieved Context -> LLM -> Grounded Answer
+Synthetic or approved EHR data
+        |
+Pre-processing and PHI guard
+        |
+Clinically meaningful document chunks
+        |
+TF-IDF retrieval baseline
+        |
+Patient-specific filtering and evidence ranking
+        |
+Clinical safety layer
+        |
+Grounded answer generation with citations
+        |
+Evaluation: retrieval metrics, citation coverage and safety checks
 ```
 
-## Technologies
+## Evaluation
 
-- Python
-- LLM APIs or open-source language models
-- Embedding models
-- Vector search
-- pandas / NumPy for data processing
-- Jupyter for experiments
-- Git for version control
+The prototype evaluates retrieval on synthetic relevance labels using:
 
-## Reproducibility
+- Precision@k;
+- Recall@k;
+- Mean Reciprocal Rank;
+- citation coverage;
+- unsafe-query handling;
+- wrong-patient retrieval checks.
 
-This public portfolio version should not contain sensitive or private data. Reproducible examples can be added using synthetic documents or public-domain healthcare guidance.
+The current TF-IDF retriever is intentionally simple. It provides a transparent baseline for later comparison with BM25, dense retrieval, hybrid retrieval and clinically reranked retrieval.
 
-Suggested setup:
+## Data and Safety
 
-```bash
-python -m venv .venv
-.venv\\Scripts\\activate
-pip install -r requirements.txt
-```
+No real patient records, NHS extracts, private notes, credentials or access tokens are included. The repository contains only synthetic EHR-style examples under `data/synthetic/`.
 
-## Evaluation Plan
+The `data/raw/` directory is intentionally empty. Restricted datasets, if ever used, should remain outside the public repository unless redistribution is explicitly permitted.
 
-- Retrieval quality using top-k relevance checks
-- Answer faithfulness against retrieved context
-- Citation coverage
-- Failure case analysis for ambiguous or unsupported questions
+## Future Work
 
-## Status
+- Add BM25, dense and hybrid retrievers.
+- Add structured clinical metadata reranking for resource type, section and timestamp.
+- Extend the synthetic relevance set with harder negative examples.
+- Add answer-level faithfulness scoring and unsupported-claim detection.
+- Compare baseline RAG against clinically aware retrieval and safety variants.
+- Evaluate on approved public or de-identified clinical datasets if governance permits.
 
-Architecture and methodology prepared. Public, non-sensitive implementation examples and evaluation notes can be added next.
+## References
+
+See [`docs/REFERENCES.md`](docs/REFERENCES.md) for technical, governance and dataset references.
