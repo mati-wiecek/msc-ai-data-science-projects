@@ -25,4 +25,4 @@ This repository is structured as a recruiter-friendly technical portfolio. Each 
 
 ## Core Stack
 
-Python, R, pandas, NumPy, scikit-learn, PyTorch, Jupyter, RMarkdown, matplotlib, seaborn, Git.
+Python, R, pandas, NumPy, SciPy, scikit-learn, Jupyter, RMarkdown, matplotlib, seaborn, pytest, Ruff, Git.
