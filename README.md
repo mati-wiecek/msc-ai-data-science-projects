@@ -11,6 +11,7 @@ This repository is structured as a recruiter-friendly technical portfolio. Each 
 | [CS801 Quantitative Methods in AI](cs801-quantitative-methods-ai/) | Statistics, ML evaluation, Kaggle critique | Comparative analysis of three machine learning workflows using formal tests, validation metrics, reproducible notebooks, and a methodology report. |
 | [Clinically Aware RAG for NHS-style EHR](project-rag-nhs/) | Generative AI, RAG, Clinical NLP | Runnable synthetic-data RAG prototype with patient-aware retrieval, safety checks, cited answers, evaluation qrels, tests and governance documentation. |
 | [Sign Language MNIST - Neural Networks from Scratch](sign-language-mnist/) | Computer Vision, Deep Learning, NumPy | From-scratch perceptron and fully connected neural network analysis with executed notebooks, metrics, learning curves, and label-diagnostic discussion. |
+| [CS985 Spotify Popularity and Genre Modelling](cs985-spotify-popularity-genre-ml/) | Machine Learning, Regression, Classification | Reproducible song-metadata modelling workflow with CatBoost regression, Linear SVC genre classification, local validation metrics, benchmark results, figures and tests. |
 | [CS982 Pettan Battle Card Analysis](cs982-dragon-ball-pettan-big-data/) | Big Data Technologies, Clustering, Classification | Reproducible structured-data workflow with feature engineering, Mann-Whitney tests, K-Means segmentation, and leakage-aware supervised modelling. |
 | [Evolutionary Optimisation of a Trading Strategy](genetic-algorithms-portfolio-optimisation/) | Evolutionary Computation, AI for Finance | Genetic-algorithm optimisation of a long/cash MACD/RSI/ADX trading strategy with chronological validation, benchmarks, cached results, figures and full R implementation. |
 | [CS971 GA Portfolio Optimisation](cs971-ga-portfolio-optimisation/) | AI for Finance, Portfolio Optimisation, R | Genetic-algorithm portfolio allocation and asset-selection study with chronological holdout validation, random baselines, risk-return preference sweeps and reproducible R scripts. |
@@ -25,4 +26,4 @@ This repository is structured as a recruiter-friendly technical portfolio. Each 
 
 ## Core Stack
 
-Python, R, pandas, NumPy, SciPy, scikit-learn, Jupyter, RMarkdown, matplotlib, seaborn, pytest, Ruff, Git.
+Python, R, pandas, NumPy, SciPy, scikit-learn, CatBoost, Jupyter, RMarkdown, matplotlib, seaborn, pytest, Ruff, Git.

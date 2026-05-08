@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Raw/private data
+data/raw/*.csv
+!data/raw/.gitkeep
+
+# Generated outputs
+outputs/*.csv
+outputs/*.json
+outputs/*.pkl
+outputs/*.joblib
+outputs/*.cbm
+!outputs/README.md
+!outputs/.gitkeep
+
+# Local OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

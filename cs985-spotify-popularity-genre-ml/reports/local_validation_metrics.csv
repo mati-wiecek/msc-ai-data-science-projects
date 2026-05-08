@@ -1,0 +1,9 @@
+task,model,metric,train_metric,validation_metric
+regression,Dummy mean,RMSE,13.003251583877375,15.160880811080196
+regression,Linear regression,RMSE,8.382295546066615,11.601168740747573
+regression,Ridge regression,RMSE,9.002977859339424,11.17081164541186
+regression,Random forest,RMSE,4.816050417193663,10.951372361145257
+classification,Dummy most frequent,Accuracy,0.16981132075471697,0.175
+classification,Linear SVC balanced,Accuracy,1.0,0.5875
+classification,Random forest,Accuracy,0.4559748427672956,0.425
+classification,TF-IDF text SVC (best C=2.0),Accuracy,,0.4875
