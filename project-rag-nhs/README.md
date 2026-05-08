@@ -1,10 +1,32 @@
 # Clinically Aware RAG for NHS-Style Electronic Health Records
 
+[![Portfolio CI](https://github.com/mati-wiecek/msc-ai-data-science-projects/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/mati-wiecek/msc-ai-data-science-projects/actions/workflows/portfolio-ci.yml)
+
 This project implements a research prototype for clinically aware Retrieval-Augmented Generation over synthetic Electronic Health Record (EHR) snippets. It focuses on grounded retrieval, patient-specific evidence filtering, citation-aware answer generation and explicit safety boundaries for unsupported or clinically unsafe questions.
 
 The current implementation uses synthetic records only. It is intended for research and portfolio demonstration, not for clinical use.
 
 > Safety boundary: this repository is not a medical device, not a clinical decision-support system and must not be used with real patient data unless appropriate ethics, information governance, security, legal basis, approvals and data access agreements are in place.
+
+## Results Snapshot
+
+| Capability | Current evidence |
+| --- | --- |
+| Retrieval quality on synthetic qrels | Precision@3 `0.583`, Recall@3 `1.000`, MRR `1.000` |
+| Patient-aware search | Retrieval can be filtered to a specific synthetic patient before answer generation. |
+| Safety behaviour | Diagnosis, prescribing and treatment-instruction requests trigger constrained responses. |
+| Engineering readiness | Installable Python package, `clinrag` CLI, `pytest` tests, Ruff configuration and CI workflow. |
+
+Example CLI answer:
+
+```text
+clinrag demo "What medications is patient SYN-001 taking?"
+
+Based on the retrieved synthetic EHR evidence, the record contains the following relevant information:
+- [SYN-001-meds] medications: metformin, ramipril and atorvastatin are listed in the synthetic record.
+
+The answer is limited to the cited evidence above; absence of evidence here does not prove absence in the full record.
+```
 
 ## Research Aim
 
@@ -108,22 +130,15 @@ Expected behaviour: the system retrieves relevant synthetic EHR snippets and pro
 
 ## Architecture
 
-```text
-Synthetic or approved EHR data
-        |
-Pre-processing and PHI guard
-        |
-Clinically meaningful document chunks
-        |
-TF-IDF retrieval baseline
-        |
-Patient-specific filtering and evidence ranking
-        |
-Clinical safety layer
-        |
-Grounded answer generation with citations
-        |
-Evaluation: retrieval metrics, citation coverage and safety checks
+```mermaid
+flowchart TD
+    A[Synthetic or approved EHR data] --> B[Pre-processing and PHI guard]
+    B --> C[Clinically meaningful document chunks]
+    C --> D[TF-IDF retrieval baseline]
+    D --> E[Patient-specific filtering and evidence ranking]
+    E --> F[Clinical safety layer]
+    F --> G[Grounded answer generation with citations]
+    G --> H[Evaluation: retrieval metrics, citation coverage and safety checks]
 ```
 
 ## Evaluation

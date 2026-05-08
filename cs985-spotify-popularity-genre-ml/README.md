@@ -1,5 +1,7 @@
 # Spotify Popularity and Genre Modelling
 
+[![Portfolio CI](https://github.com/mati-wiecek/msc-ai-data-science-projects/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/mati-wiecek/msc-ai-data-science-projects/actions/workflows/portfolio-ci.yml)
+
 A compact machine-learning project for two related song-metadata tasks:
 
 1. **Popularity regression** - predict a numeric song popularity score.
@@ -15,6 +17,12 @@ The project is organised as a reproducible applied ML workflow: raw data is kept
 | Genre classification | Linear SVC with balanced class weights | Accuracy **0.57142** | Validation accuracy **0.5875** |
 
 The classification audit found that the tabular Linear SVC pipeline exactly matched the validated prediction file, while the optional TF-IDF text variant performed worse on the reproducible validation split. For that reason, the text variant is kept as an experiment rather than the default model.
+
+## Visual Results
+
+| Regression validation | Classification validation |
+| --- | --- |
+| ![Regression validation RMSE](figures/regression_validation_rmse.png) | ![Classification validation accuracy](figures/classification_validation_accuracy.png) |
 
 ## Project Structure
 

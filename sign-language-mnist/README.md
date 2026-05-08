@@ -1,5 +1,7 @@
 # Sign Language MNIST - Neural Networks from Scratch
 
+[![Portfolio CI](https://github.com/mati-wiecek/msc-ai-data-science-projects/actions/workflows/portfolio-ci.yml/badge.svg)](https://github.com/mati-wiecek/msc-ai-data-science-projects/actions/workflows/portfolio-ci.yml)
+
 This project studies image classification on the Sign Language MNIST dataset using models implemented from scratch in NumPy. The analysis compares a linear perceptron baseline with fully connected neural networks for binary and multi-class hand-sign recognition.
 
 The main research focus is not only predictive performance, but also how model capacity, activation functions, optimisation choices and evaluation design affect classification behaviour on flattened image pixels.
@@ -43,6 +45,8 @@ sign-language-mnist/
 |-- docs/
 |   |-- methodology_report.md
 |   `-- methodology_notes.md
+|-- figures/
+|   `-- results_summary.svg
 |-- reports/
 |   |-- final_run_results.md
 |   `-- final_run_results.json
@@ -55,6 +59,8 @@ sign-language-mnist/
 ## Results Summary
 
 The notebooks were executed with local copies of `sign_mnist_train.csv` and `sign_mnist_test.csv`. The final recorded results are saved in `reports/final_run_results.md` and `reports/final_run_results.json`.
+
+![Accuracy summary](figures/results_summary.svg)
 
 | Model / experiment | Best configuration | Main result |
 |---|---:|---:|
