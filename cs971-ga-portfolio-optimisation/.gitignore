@@ -1,0 +1,47 @@
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj.user/
+
+# Local environments
+renv/
+.venv/
+venv/
+env/
+
+# Raw data and local caches
+data/raw/*
+!data/raw/.gitkeep
+*.rds
+*.RDS
+*.csv
+*.parquet
+*.feather
+.cache/
+cache/
+outputs/cache/
+
+# Generated outputs
+outputs/*
+!outputs/.gitkeep
+figures/*
+!figures/.gitkeep
+
+# Notebook/runtime artefacts
+.ipynb_checkpoints/
+*.nb.html
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.secret
+secrets.*

@@ -13,6 +13,7 @@ This repository is structured as a recruiter-friendly technical portfolio. Each 
 | [Sign Language MNIST - Neural Networks from Scratch](sign-language-mnist/) | Computer Vision, Deep Learning, NumPy | From-scratch perceptron and fully connected neural network analysis with executed notebooks, metrics, learning curves, and label-diagnostic discussion. |
 | [CS982 Pettan Battle Card Analysis](cs982-dragon-ball-pettan-big-data/) | Big Data Technologies, Clustering, Classification | Reproducible structured-data workflow with feature engineering, Mann-Whitney tests, K-Means segmentation, and leakage-aware supervised modelling. |
 | [Evolutionary Optimisation of a Trading Strategy](genetic-algorithms-portfolio-optimisation/) | Evolutionary Computation, AI for Finance | Genetic-algorithm optimisation of a long/cash MACD/RSI/ADX trading strategy with chronological validation, benchmarks, cached results, figures and full R implementation. |
+| [CS971 GA Portfolio Optimisation](cs971-ga-portfolio-optimisation/) | AI for Finance, Portfolio Optimisation, R | Genetic-algorithm portfolio allocation and asset-selection study with chronological holdout validation, random baselines, risk-return preference sweeps and reproducible R scripts. |
 
 ## Portfolio Goals
 
@@ -24,4 +25,4 @@ This repository is structured as a recruiter-friendly technical portfolio. Each 
 
 ## Core Stack
 
-Python, pandas, NumPy, scikit-learn, PyTorch, Jupyter, matplotlib, seaborn, Git.
+Python, R, pandas, NumPy, scikit-learn, PyTorch, Jupyter, RMarkdown, matplotlib, seaborn, Git.

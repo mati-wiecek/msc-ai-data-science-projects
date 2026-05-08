@@ -1,0 +1,534 @@
+---
+title: "Portfolio Optimisation with Genetic Algorithms"
+output:
+  html_document:
+    toc: true
+    number_sections: true
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+try(Sys.setlocale("LC_TIME", "English"), silent = TRUE)
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center",
+  fig.width = 7,
+  fig.height = 4.2,
+  dpi = 180
+)
+
+candidate_roots <- c(".", "..")
+project_root <- candidate_roots[file.exists(file.path(candidate_roots, "src", "data_utils.R"))][1]
+project_root <- normalizePath(project_root, mustWork = TRUE)
+knitr::opts_knit$set(root.dir = project_root)
+
+source(file.path(project_root, "src", "data_utils.R"))
+source(file.path(project_root, "src", "metrics.R"))
+source(file.path(project_root, "src", "ga_portfolio.R"))
+source(file.path(project_root, "src", "plotting.R"))
+
+load_required_packages(c("quantmod", "GA", "xts", "knitr"))
+set.seed(123)
+
+START_DATE <- "2021-01-01"
+END_DATE <- "2025-12-31"
+TRAIN_WINDOW <- "2021/2024"
+HOLDOUT_WINDOW <- "2025"
+```
+
+# Research Objective
+
+This analysis evaluates whether genetic algorithms can identify long-only equity portfolios with stronger risk-adjusted performance than simple benchmark allocations. The workflow combines weight optimisation, benchmark comparison, preference-sensitive risk-return optimisation, and automated asset selection from a larger candidate universe.
+
+The key research questions are:
+
+1. Can a real-valued genetic algorithm optimise portfolio weights for a diversified 10-asset basket?
+2. Does the evolved allocation generalise to a later holdout window?
+3. How does the result compare with equal-weight portfolios and randomly sampled long-only portfolios?
+4. Can a nested genetic algorithm select an asset subset and optimise its weights from a 50-stock universe?
+
+# Dataset
+
+Adjusted close prices are downloaded locally from Yahoo Finance through `quantmod`. The analysis uses daily log returns and a chronological split:
+
+- Training window: `r START_DATE` to 2024-12-31
+- Holdout window: 2025-01-01 to `r END_DATE`
+
+Raw market data is not stored in the repository. Re-running the notebook recreates the dataset locally.
+
+# Methodology
+
+The methodology uses annualised return, annualised volatility, Sharpe ratio, maximum drawdown, empirical percentile rank, and cumulative growth. Portfolio weights are long-only and fully invested by normalising non-negative weight vectors to sum to one.
+
+The main optimisation stages are:
+
+- Manual 10-asset universe with real-valued GA weight optimisation.
+- Equal-weight benchmark and random long-only portfolio benchmark.
+- Risk-return preference sweep using
+
+\[
+\text{fitness}(w) = \lambda \cdot \text{return}(w) - (1 - \lambda) \cdot \text{risk}(w), \quad \lambda \in [0, 1].
+\]
+
+Here, `lambda = 0` prioritises volatility reduction and `lambda = 1` prioritises return. Intermediate values generate different risk-return preferences.
+
+- Larger 50-stock universe with binary GA asset selection.
+- Integrated selection approach where the outer GA selects assets and an inner GA optimises weights for each selected subset.
+
+# Manual 10-Asset Portfolio
+
+```{r assets_manual_table}
+assets_manual <- make_manual_asset_table()
+knitr::kable(assets_manual, row.names = FALSE, caption = "Manual 10-asset universe and intended portfolio role.")
+```
+
+The 10-asset universe combines growth, financial, defensive, energy, and consumer exposures. This prevents the analysis from relying on a single market theme and provides a practical test case for long-only diversification.
+
+```{r data_prep, include=FALSE}
+dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
+
+prices_10 <- download_adjusted_prices(
+  tickers = assets_manual$Ticker,
+  start_date = START_DATE,
+  end_date = END_DATE,
+  cache_path = "data/raw/prices_manual_10.rds"
+)
+
+returns_10 <- calculate_log_returns(prices_10)
+split_10 <- split_returns(returns_10, TRAIN_WINDOW, HOLDOUT_WINDOW)
+train_10 <- split_10$train
+holdout_10 <- split_10$holdout
+
+mu_train_10 <- colMeans(train_10)
+cov_train_10 <- cov(train_10)
+mu_holdout_10 <- colMeans(holdout_10)
+cov_holdout_10 <- cov(holdout_10)
+
+corr_matrix <- cor(train_10)
+corr_values <- corr_matrix[upper.tri(corr_matrix)]
+avg_pair_corr <- mean(corr_values, na.rm = TRUE)
+idx_upper <- which(upper.tri(corr_matrix), arr.ind = TRUE)
+max_idx <- idx_upper[which.max(corr_values), ]
+min_idx <- idx_upper[which.min(corr_values), ]
+max_pair <- paste(colnames(corr_matrix)[max_idx[1]], colnames(corr_matrix)[max_idx[2]], sep = " & ")
+min_pair <- paste(colnames(corr_matrix)[min_idx[1]], colnames(corr_matrix)[min_idx[2]], sep = " & ")
+max_corr <- corr_matrix[max_idx[1], max_idx[2]]
+min_corr <- corr_matrix[min_idx[1], min_idx[2]]
+```
+
+```{r corr_plot}
+plot_correlation_matrix(corr_matrix, "Correlation matrix (train: 2021-2024)")
+```
+
+The average pairwise training correlation is **`r round(avg_pair_corr, 2)`**. The most correlated pair is **`r max_pair`** with correlation **`r round(max_corr, 2)`**, while the least correlated pair is **`r min_pair`** with correlation **`r round(min_corr, 2)`**. The correlation structure supports the use of a diversified basket rather than a narrowly concentrated single-theme allocation.
+
+# Genetic Algorithm Weight Optimisation
+
+A real-valued genetic algorithm is used to optimise weights against the training-period Sharpe ratio. The allocation is constrained to be long-only by using non-negative genes and normalising the final vector to sum to one.
+
+```{r ga_weights}
+weight_solution <- optimise_weights_sharpe(
+  mu_train = mu_train_10,
+  cov_train = cov_train_10,
+  pop_size = 60,
+  max_iter = 80,
+  run = 30,
+  elitism = 2,
+  mutation_probability = 0.20,
+  crossover_probability = 0.80
+)
+
+GA_weights <- weight_solution$model
+w_ga <- weight_solution$weights
+w_equal <- create_equal_weights(length(w_ga))
+names(w_equal) <- names(w_ga)
+
+plot(GA_weights, main = "GA convergence: Sharpe objective")
+```
+
+```{r weight_table}
+weights_table <- data.frame(
+  Ticker = names(w_ga),
+  Weight_GA = as.numeric(w_ga),
+  Weight_Equal = as.numeric(w_equal),
+  stringsAsFactors = FALSE
+)
+weights_table <- weights_table[order(-weights_table$Weight_GA), ]
+knitr::kable(round_numeric_columns(weights_table, 4), row.names = FALSE, caption = "Optimised weights versus equal-weight benchmark.")
+```
+
+The largest evolved allocations are **`r paste(weights_table$Ticker[1:3], collapse = ", ")`**, indicating that these assets contributed strongly to the training-period risk-adjusted objective under the long-only constraint.
+
+# Holdout Evaluation
+
+The evolved weights are fixed after training and evaluated on the 2025 holdout window. This separates optimisation performance from later-period generalisation.
+
+```{r train_holdout_metrics}
+train_metrics <- rbind(
+  GA_Train = portfolio_series_metrics(w_ga, train_10),
+  Equal_Train = portfolio_series_metrics(w_equal, train_10)
+)
+
+holdout_metrics <- rbind(
+  GA_Holdout = portfolio_series_metrics(w_ga, holdout_10),
+  Equal_Holdout = portfolio_series_metrics(w_equal, holdout_10)
+)
+
+combined_metrics <- rbind(train_metrics, holdout_metrics)
+knitr::kable(
+  round_numeric_columns(rownames_to_column(as.data.frame(combined_metrics)), 4),
+  row.names = FALSE,
+  caption = "Training and holdout-period performance."
+)
+```
+
+```{r cumulative_growth}
+port_ga_holdout <- portfolio_log_returns(w_ga, holdout_10)
+port_equal_holdout <- portfolio_log_returns(w_equal, holdout_10)
+growth_ga <- exp(cumsum(port_ga_holdout))
+growth_equal <- exp(cumsum(port_equal_holdout))
+
+plot_cumulative_growth(growth_ga, growth_equal, "Cumulative growth in holdout period")
+```
+
+The holdout Sharpe ratio is **`r round(holdout_metrics["GA_Holdout", "Sharpe"], 2)`** for the GA allocation and **`r round(holdout_metrics["Equal_Holdout", "Sharpe"], 2)`** for the equal-weight benchmark. The comparison is deliberately conservative because no holdout-period information is used during optimisation.
+
+# Benchmarking Against Random Long-Only Portfolios
+
+Random long-only portfolios are generated by sampling positive weights and normalising each vector to sum to one. This creates an empirical benchmark distribution across feasible allocations.
+
+```{r random_benchmark}
+n_random <- 2000
+random_weights <- generate_random_weights(n_random, length(w_ga))
+
+random_train_metrics <- t(apply(random_weights, 1, annualised_metrics_mucov,
+                                mu_daily = mu_train_10, cov_daily = cov_train_10))
+random_holdout_metrics <- t(apply(random_weights, 1, annualised_metrics_mucov,
+                                  mu_daily = mu_holdout_10, cov_daily = cov_holdout_10))
+
+ga_train_m <- annualised_metrics_mucov(w_ga, mu_train_10, cov_train_10)
+eq_train_m <- annualised_metrics_mucov(w_equal, mu_train_10, cov_train_10)
+ga_holdout_m <- annualised_metrics_mucov(w_ga, mu_holdout_10, cov_holdout_10)
+eq_holdout_m <- annualised_metrics_mucov(w_equal, mu_holdout_10, cov_holdout_10)
+
+random_summary <- rbind(
+  Train_Mean = colMeans(random_train_metrics, na.rm = TRUE),
+  Train_SD = apply(random_train_metrics, 2, sd, na.rm = TRUE),
+  Holdout_Mean = colMeans(random_holdout_metrics, na.rm = TRUE),
+  Holdout_SD = apply(random_holdout_metrics, 2, sd, na.rm = TRUE)
+)
+
+rank_table <- data.frame(
+  Portfolio = c("Genetic algorithm weights", "Equal weights"),
+  Train_Sharpe = c(ga_train_m["Sharpe"], eq_train_m["Sharpe"]),
+  Train_Percentile = c(
+    rank_percentile(ga_train_m["Sharpe"], random_train_metrics[, "Sharpe"]),
+    rank_percentile(eq_train_m["Sharpe"], random_train_metrics[, "Sharpe"])
+  ),
+  Holdout_Sharpe = c(ga_holdout_m["Sharpe"], eq_holdout_m["Sharpe"]),
+  Holdout_Percentile = c(
+    rank_percentile(ga_holdout_m["Sharpe"], random_holdout_metrics[, "Sharpe"]),
+    rank_percentile(eq_holdout_m["Sharpe"], random_holdout_metrics[, "Sharpe"])
+  ),
+  stringsAsFactors = FALSE
+)
+
+rank_table_print <- rank_table
+rank_table_print$Train_Percentile <- sprintf("%.1f%%", rank_table_print$Train_Percentile)
+rank_table_print$Holdout_Percentile <- sprintf("%.1f%%", rank_table_print$Holdout_Percentile)
+```
+
+```{r random_summary_table}
+knitr::kable(
+  round_numeric_columns(rownames_to_column(as.data.frame(random_summary), "Summary"), 4),
+  row.names = FALSE,
+  caption = "Random portfolio distribution summary."
+)
+```
+
+```{r random_rank_table}
+knitr::kable(
+  round_numeric_columns(rank_table_print, 4),
+  row.names = FALSE,
+  caption = "Empirical percentile rank against random long-only portfolios."
+)
+```
+
+```{r risk_return_scatter}
+plot_risk_return_cloud(
+  random_metrics = random_train_metrics,
+  ga_metrics = ga_train_m,
+  equal_metrics = eq_train_m,
+  title = "Risk-return comparison (train)"
+)
+```
+
+The risk-return plot uses separate colours, point shapes, and point labels for the GA and equal-weight portfolios, making the benchmark points distinguishable from the random portfolio cloud.
+
+# Risk-Return Preference Sweep
+
+The preference sweep evaluates how the optimiser behaves when the objective shifts from risk reduction to return seeking. The revised fitness function is:
+
+\[
+\text{fitness}(w) = \lambda \cdot \text{return}(w) - (1 - \lambda) \cdot \text{risk}(w), \quad \lambda \in [0, 1].
+\]
+
+```{r preference_sweep}
+lambda_grid <- seq(0, 1, by = 0.2)
+preference_results <- list()
+preference_weights <- list()
+
+for (lambda in lambda_grid) {
+  solution <- optimise_weights_return_risk(
+    mu_train = mu_train_10,
+    cov_train = cov_train_10,
+    lambda = lambda,
+    pop_size = 55,
+    max_iter = 60,
+    run = 20
+  )
+
+  weights <- solution$weights
+  preference_weights[[as.character(lambda)]] <- weights
+
+  train_m <- annualised_metrics_mucov(weights, mu_train_10, cov_train_10)
+  holdout_m <- annualised_metrics_mucov(weights, mu_holdout_10, cov_holdout_10)
+
+  preference_results[[as.character(lambda)]] <- data.frame(
+    Lambda = lambda,
+    Train_Return = as.numeric(train_m["Return"]),
+    Train_Risk = as.numeric(train_m["Risk"]),
+    Train_Sharpe = as.numeric(train_m["Sharpe"]),
+    Holdout_Return = as.numeric(holdout_m["Return"]),
+    Holdout_Risk = as.numeric(holdout_m["Risk"]),
+    Holdout_Sharpe = as.numeric(holdout_m["Sharpe"]),
+    stringsAsFactors = FALSE
+  )
+}
+
+preference_table <- do.call(rbind, preference_results)
+preference_table <- preference_table[order(preference_table$Lambda), ]
+
+top_weights_table <- summarise_top_weights(preference_weights)
+top_weights_table <- top_weights_table[order(top_weights_table$Lambda), ]
+```
+
+```{r preference_metrics_table}
+knitr::kable(
+  round_numeric_columns(preference_table, 4),
+  row.names = FALSE,
+  caption = "Performance across risk-return preference values."
+)
+```
+
+```{r preference_tradeoff_plot}
+plot_lambda_tradeoff(preference_table, "Risk-return trade-off across lambda")
+```
+
+```{r preference_top_weights_table}
+knitr::kable(top_weights_table, row.names = FALSE, caption = "Top allocations across preference values.")
+```
+
+```{r preference_discussion_vars, include=FALSE}
+low_lambda <- min(preference_table$Lambda)
+high_lambda <- max(preference_table$Lambda)
+low_row <- top_weights_table[top_weights_table$Lambda == low_lambda, ]
+high_row <- top_weights_table[top_weights_table$Lambda == high_lambda, ]
+extract_assets <- function(row) gsub(" \\(.*", "", unlist(row[c("Top1", "Top2", "Top3")], use.names = FALSE))
+low_assets <- paste(extract_assets(low_row), collapse = ", ")
+high_assets <- paste(extract_assets(high_row), collapse = ", ")
+```
+
+At **lambda = `r low_lambda`**, the objective prioritises risk reduction and the largest allocations are **`r low_assets`**. At **lambda = `r high_lambda`**, the objective prioritises return and the largest allocations are **`r high_assets`**. Intermediate values show how the optimiser transitions between these regimes. Assets that remain prominent across several values can be interpreted as robust contributors under multiple risk preferences, while assets appearing only at high-return settings should be treated as more regime-sensitive.
+
+# Automated Asset Selection from a Larger Universe
+
+The larger universe contains 50 large-cap US equities. Two selection approaches are evaluated:
+
+- Proxy selection: a binary GA selects assets using equal-weight subset performance.
+- Integrated selection: a binary GA selects assets, while a nested real-valued GA optimises weights for each candidate subset.
+
+```{r pool_data, include=FALSE}
+pool_tickers <- make_large_cap_universe()
+prices_pool <- download_adjusted_prices(
+  tickers = pool_tickers,
+  start_date = START_DATE,
+  end_date = END_DATE,
+  cache_path = "data/raw/prices_pool_50.rds"
+)
+
+returns_pool <- calculate_log_returns(prices_pool)
+split_pool <- split_returns(returns_pool, TRAIN_WINDOW, HOLDOUT_WINDOW)
+train_pool <- split_pool$train
+holdout_pool <- split_pool$holdout
+
+mu_pool_train <- colMeans(train_pool)
+cov_pool_train <- cov(train_pool)
+mu_pool_holdout <- colMeans(holdout_pool)
+cov_pool_holdout <- cov(holdout_pool)
+```
+
+## Proxy Selection
+
+```{r proxy_selection}
+proxy_selection <- optimise_asset_selection_proxy(
+  mu_train = mu_pool_train,
+  cov_train = cov_pool_train,
+  target_k = 10,
+  min_k = 8,
+  max_k = 12,
+  size_regularisation = 0.15
+)
+
+proxy_tickers <- colnames(train_pool)[proxy_selection$selected_idx]
+train_proxy <- train_pool[, proxy_tickers]
+holdout_proxy <- holdout_pool[, proxy_tickers]
+
+mu_proxy_train <- colMeans(train_proxy)
+cov_proxy_train <- cov(train_proxy)
+mu_proxy_holdout <- colMeans(holdout_proxy)
+cov_proxy_holdout <- cov(holdout_proxy)
+
+proxy_weight_solution <- optimise_weights_sharpe(mu_proxy_train, cov_proxy_train)
+w_proxy_ga <- proxy_weight_solution$weights
+w_proxy_equal <- create_equal_weights(length(proxy_tickers))
+
+proxy_performance <- rbind(
+  Proxy_Equal_Train = annualised_metrics_mucov(w_proxy_equal, mu_proxy_train, cov_proxy_train),
+  Proxy_GA_Train = annualised_metrics_mucov(w_proxy_ga, mu_proxy_train, cov_proxy_train),
+  Proxy_Equal_Holdout = annualised_metrics_mucov(w_proxy_equal, mu_proxy_holdout, cov_proxy_holdout),
+  Proxy_GA_Holdout = annualised_metrics_mucov(w_proxy_ga, mu_proxy_holdout, cov_proxy_holdout)
+)
+```
+
+Selected tickers: **`r paste(proxy_tickers, collapse = ", ")`**.
+
+```{r proxy_performance_table}
+knitr::kable(
+  round_numeric_columns(rownames_to_column(as.data.frame(proxy_performance)), 4),
+  row.names = FALSE,
+  caption = "Proxy-selected subset: equal weights versus GA-refined weights."
+)
+```
+
+## Integrated Selection
+
+The integrated approach directly links asset selection to weight optimisation. A cache is used so repeated candidate subsets are not re-evaluated unnecessarily.
+
+```{r integrated_selection}
+integrated_selection <- optimise_asset_selection_integrated(
+  mu_train = mu_pool_train,
+  cov_train = cov_pool_train,
+  target_k = 10,
+  min_k = 8,
+  max_k = 12,
+  size_regularisation = 0.15,
+  pop_size = 25,
+  max_iter = 30,
+  run = 12,
+  inner_pop = 25,
+  inner_iter = 35,
+  inner_run = 12
+)
+
+integrated_tickers <- colnames(train_pool)[integrated_selection$selected_idx]
+train_integrated <- train_pool[, integrated_tickers]
+holdout_integrated <- holdout_pool[, integrated_tickers]
+
+mu_integrated_train <- colMeans(train_integrated)
+cov_integrated_train <- cov(train_integrated)
+mu_integrated_holdout <- colMeans(holdout_integrated)
+cov_integrated_holdout <- cov(holdout_integrated)
+
+integrated_weight_solution <- optimise_weights_sharpe(
+  mu_integrated_train,
+  cov_integrated_train,
+  pop_size = 65,
+  max_iter = 70,
+  run = 22
+)
+w_integrated <- integrated_weight_solution$weights
+
+integrated_performance <- rbind(
+  Integrated_GA_Train = annualised_metrics_mucov(w_integrated, mu_integrated_train, cov_integrated_train),
+  Integrated_GA_Holdout = annualised_metrics_mucov(w_integrated, mu_integrated_holdout, cov_integrated_holdout)
+)
+```
+
+Selected tickers: **`r paste(integrated_tickers, collapse = ", ")`**.
+
+```{r integrated_table}
+knitr::kable(
+  round_numeric_columns(rownames_to_column(as.data.frame(integrated_performance)), 4),
+  row.names = FALSE,
+  caption = "Integrated asset selection and weight optimisation performance."
+)
+```
+
+# Evaluation Against Random Asset Subsets
+
+Random 10-stock subsets are used as a baseline for the asset-selection experiment. Each random subset is evaluated with equal weights on the holdout window.
+
+```{r random_subset_comparison}
+set.seed(123)
+n_subsets <- 300
+subset_size <- 10
+random_subset_sharpes <- numeric(n_subsets)
+
+for (i in seq_len(n_subsets)) {
+  subset_i <- sample(colnames(train_pool), subset_size, replace = FALSE)
+  mu_i <- mu_pool_holdout[subset_i]
+  cov_i <- cov_pool_holdout[subset_i, subset_i, drop = FALSE]
+  random_subset_sharpes[i] <- annualised_metrics_mucov(create_equal_weights(subset_size), mu_i, cov_i)["Sharpe"]
+}
+
+manual_holdout_sharpe <- as.numeric(ga_holdout_m["Sharpe"])
+integrated_holdout_sharpe <- as.numeric(
+  annualised_metrics_mucov(w_integrated, mu_integrated_holdout, cov_integrated_holdout)["Sharpe"]
+)
+
+subset_comparison <- data.frame(
+  Portfolio = c("Manual 10 assets with GA weights", "Integrated selection with GA weights", "Random subset equal-weight mean"),
+  Holdout_Sharpe = c(manual_holdout_sharpe, integrated_holdout_sharpe, mean(random_subset_sharpes, na.rm = TRUE)),
+  Percentile_vs_Random_Subsets = c(
+    rank_percentile(manual_holdout_sharpe, random_subset_sharpes),
+    rank_percentile(integrated_holdout_sharpe, random_subset_sharpes),
+    NA_real_
+  ),
+  stringsAsFactors = FALSE
+)
+
+subset_comparison_print <- subset_comparison
+subset_comparison_print$Percentile_vs_Random_Subsets <- ifelse(
+  is.na(subset_comparison_print$Percentile_vs_Random_Subsets),
+  "-",
+  sprintf("%.1f%%", subset_comparison_print$Percentile_vs_Random_Subsets)
+)
+```
+
+```{r subset_comparison_table}
+knitr::kable(
+  round_numeric_columns(subset_comparison_print, 4),
+  row.names = FALSE,
+  caption = "Holdout comparison against random 10-stock subsets."
+)
+```
+
+The integrated method is valuable because the asset set is learned automatically while remaining competitive against random subset baselines. The manual 10-asset basket is still useful as a controlled benchmark for interpreting the larger selection experiment.
+
+# Limitations
+
+This analysis is a research prototype rather than an investment system. The following assumptions should be considered when interpreting results:
+
+- No transaction costs, taxes, slippage, liquidity constraints, or turnover constraints are modelled.
+- The optimiser is sensitive to the selected time window and market regime.
+- Sharpe ratio assumes volatility is an adequate risk proxy.
+- The asset universe is limited to liquid large-cap US equities.
+- Genetic algorithms are stochastic, so repeated runs can produce slightly different allocations even with similar performance.
+
+# Future Work
+
+Future extensions include walk-forward validation, transaction-cost-aware objectives, turnover limits, alternative risk measures such as CVaR or maximum drawdown, stability analysis across multiple random seeds, and comparison with convex optimisation baselines.

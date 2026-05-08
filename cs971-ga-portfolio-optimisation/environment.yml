@@ -1,0 +1,11 @@
+name: ga-portfolio-optimisation
+channels:
+  - conda-forge
+dependencies:
+  - r-base>=4.3
+  - r-quantmod
+  - r-ga
+  - r-xts
+  - r-knitr
+  - r-rmarkdown
+  - r-tinytex
